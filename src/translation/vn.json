@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "services": "Dịch vụ",
+    "news": "Tin tức",
+    "signup": "Đăng ký",
+    "login": "Đăng nhập",
+    "waitlist": "Tham gia danh sách chờ"
+  },
+  "main": {
+    "h1": "Nâng cao khả năng giao tiếp tiếng Anh ngay lập tức!",
+    "h2": "Nâng cao khả năng giao tiếp tiếng Anh ngay lập tức với chương trình tiếp thu triệt để của chúng tôi. Tự tin hơn, lưu loát hơn và có kỹ năng giao tiếp hiệu quả. Hãy tham gia ngay và khám phá tiềm năng đầy đủ của bạn!",
+    "button": "Bắt đầu Học ngay"
+  },
+  "services": {
+    "offer": "Chúng tôi cung cấp gì?",
+    "1": {
+      "h1": "Chuẩn bị cho các kỳ thi tiêu chuẩn",
+      "p": "Phù hợp cho học viên đang hoặc sẽ chuẩn bị cho các kỳ thi tiếng Anh khác nhau. Giúp học viên cải thiện điểm thi tiếng Anh nói ở tốc độ nhanh hơn. Chủ yếu bao gồm các kỳ thi như IELTS, TOEFL, Cambridge Level 5, PTE, BEC, TOEIC và các kỳ thi khác."
+    },
+    "2": {
+      "h1": "Học hằng ngày",
+      "p": "Phù hợp cho học viên hiện tại không có nhu cầu chuẩn bị cho kỳ thi cụ thể, nhưng muốn nâng cao khả năng giao tiếp tiếng Anh tổng quát thông qua việc luyện tập hàng ngày. Chủ yếu bao gồm các chủ đề như hội thoại hàng ngày, tiếng Anh kinh doanh và tiếng Anh du lịch."
+    },
+    "3": {
+      "h1": "Chủ đề tùy chỉnh",
+      "p": "Phù hợp với học viên có nhu cầu cá nhân mạnh, sắp xếp nội dung huấn luyện hướng đến dựa trên đặc điểm và nhu cầu cá nhân của học viên. Chủ yếu bao gồm các chủ đề như phỏng vấn việc làm, phỏng vấn học thuật, huấn luyện diễn thuyết và thảo luận tự do."
+    }
+  },
+  "about": {
+    "h1": "Chúng tôi là ai?",
+    "description": "Trong lĩnh vực phát triển bản thân và thăng tiến nghề nghiệp, việc thông thạo tiếng Anh chiếm vị trí trung tâm. Và đây là nơi VerbalAce tỏa sáng. VerbalAce dành riêng cho những người dám ước mơ lớn, những người luôn phấn đấu để đạt được sự xuất sắc trong công việc và cá nhân. Chúng tôi cung cấp các khóa học tiếng Anh có thể tùy chỉnh, giá cả phải chăng, tập trung chủ yếu vào việc nâng cao kỹ năng nói của bạn. Tại VerbalAce, chúng tôi hiểu sức mạnh của việc giảng dạy trực tiếp. Chúng tôi coi trọng sự độc đáo của mỗi người học và điều chỉnh các phương pháp của chúng tôi để đáp ứng nhu cầu cá nhân của bạn. Và với công nghệ AI được tích hợp vào chương trình giảng dạy của chúng tôi, tài liệu học tập được thiết kế riêng cho bạn, theo tốc độ của bạn, mọi lúc, mọi nơi. Trở thành át chủ bài của câu chuyện của riêng bạn. Với VerbalAce, bạn đang tiến một bước gần hơn để nắm bắt những cơ hội nghề nghiệp quốc tế đó và đạt được mục tiêu học ngôn ngữ của mình. Bắt đầu hành trình làm chủ của bạn với VerbalAce."
+  },
+  "contact": {
+    "h1": "Có câu hỏi gì không?",
+    "p": "Vui lòng điền vào biểu mẫu bên dưới hoặc gửi email cho chúng tôi theo địa chỉ verbalace@gmail.com và chúng tôi sẽ phản hồi bạn ngay lập tức về yêu cầu của bạn.",
+    "getintouch": "Liên hệ với chúng tôi",
+    "form": {
+      "name": "Họ và tên",
+      "phone": "Số điện thoại",
+      "email": "Email",
+      "message": "Nội dung...",
+      "button": "Gửi tin nhắn"
+    }
+  },
+  "news": {
+    "h1": "Tiết lộ Câu chuyện của chúng tôi: Khám phá Những tin tức Mới nhất từ VerbalAce",
+    "latest": "Tin tức Mới nhất",
+    "keyword": "Từ khóa liên quan",
+    "more": "Xem thêm",
+    "show": "Xem thêm",
+    "key": "Từ khóa tin tức",
+    "published": "Ngày xuất bản: ",
+    "p": "Khám phá sức mạnh của học trực tuyến cùng VerbalAce! Nền tảng của chúng tôi cách mạng hóa giáo dục, cung cấp các khóa học do các chuyên gia dẫn dắt, nhằm mở khóa tiềm năng của bạn. Khám phá các lớp học ảo sáng tạo của chúng tôi, trải nghiệm học tập cá nhân hóa và luôn tiên phong. Tham gia cộng đồng học viên suốt đời của chúng tôi và om sát thế giới vô hạn. Hãy sẵn sàng khắc họa tương lai của bạn cùng VerbalAce!"
+  },
+  "footer": {
+    "description": "VerbalAce cung cấp hướng dẫn tiếng Anh trực tuyến chuyên nghiệp, nhằm cải thiện kỹ năng nói tiếng Anh của bạn. Trải nghiệm học tập cá nhân qua giáo dục một-đối-một, giúp bạn tự tin giao tiếp bằng tiếng Anh. Dù bạn đang chuẩn bị cho kỳ thi IELTS/TOEFL hay cần cải thiện tiếng Anh thương mại của mình, VerbalAce là đối tác giúp bạn đạt được mục tiêu tiếng Anh.",
+    "contact": "Liên hệ",
+    "company": "CÔNG TY",
+    "faq": "Câu hỏi thường gặp",
+    "about": "Giới thiệu",
+    "news": "Tin tức mới nhất",
+    "license": "Giấy phép",
+    "terms": "Điều khoản",
+    "privacy": "Quyền riêng tư",
+    "join": "Tham gia với chúng tôi",
+    "team": "Đội ngũ của chúng tôi"
+  }
+}

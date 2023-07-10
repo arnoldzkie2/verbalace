@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Service",
+    "news": "News",
+    "signup": "Sign up",
+    "login": "Login",
+    "waitlist": "Join Waitlist"
+  },
+  "main": {
+    "h1": "Boost your spoken english instantly!",
+    "h2": "Enhance your spoken English instantly with our immersive program. Gain confidence, fluency, and effective communication skills. Join us now and unlock your full potential!",
+    "button": "Start Learn Now"
+  },
+  "services": {
+    "offer": "What are we Offer?",
+    "1": {
+      "h1": "Standardized Test Preparation",
+      "p": "Suitable for students who are currently or will be preparing for various English exams. It helps students improve their spoken English scores at a faster pace. Mainly includes exams such as IELTS, TOEFL, Cambridge Level 5, PTE, BEC, TOEIC, and others."
+    },
+    "2": {
+      "h1": "Daily Learning",
+      "p": "Suitable for students who do not have a clear exam preparation need at the moment, but wish to enhance their overall spoken English ability through daily practice. Mainly includes topics such as everyday conversation, business English, and travel English."
+    },
+    "3": {
+      "h1": "Customized Topics",
+      "p": "Suitable for students with strong individualized needs, arranging targeted coaching content according to the student's personal characteristics and needs. Mainly includes topics such as job interviews, academic interviews, speech coaching, and free discussions"
+    }
+  },
+  "about": {
+    "h1": "Who we are?",
+    "description": "In the realm of personal growth and career advancement, the mastery of English takes the center stage. And this is where VerbalAce shines. VerbalAce is dedicated to those who dare to dream big, who strive for personal and professional excellence. We offer affordable, customizable English courses, focusing primarily on enhancing your spoken language skills. At VerbalAce, we understand the power of one-on-one teaching. We value the uniqueness of each learner and adapt our methods to meet your individual needs. And with AI technology integrated into our curriculum, learning materials are tailored for you, at your pace, anytime, anywhere. Become the ace of your own story. With VerbalAce, you’re one step closer to seizing those international career opportunities and achieving your language learning goals. Begin your journey to mastery with VerbalAce."
+  },
+  "contact": {
+    "h1": "Have Some Questions?",
+    "p": "Please fill out the form below or e-mail us at verbalace@gmail.com and we will get back to you promptly regarding our request.",
+    "getintouch": "Get in touch",
+    "form": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message...",
+      "button": "Send Message"
+    }
+  },
+  "news": {
+    "h1": "Unveiling Our Story: Discover the Latest from VerbalAce",
+    "latest": "Latest News",
+    "keyword": "Related Keyword",
+    "more": "Read More",
+    "show": "Show More",
+    "key": "News Keyword",
+    "published": "Published:",
+    "p": "Discover the power of online learning with VerbalAce! Our platform revolutionizes education, offering expert-led courses designed to unlock your potential. Explore our innovative virtual classrooms, personalized learning experiences, and stay ahead of the curve. Join our community of lifelong learners and embrace a world of limitless possibilities. Get ready to shape your future with VerbalAce!"
+  },
+  "footer": {
+    "description": "VerbalAce offers expert online English tutoring aimed at improving your oral English skills. Experience personalized one-on-one teaching that empowers you to communicate confidently in English. Whether you're preparing for IELTS/TOEFL or need to enhance your Business English, VerbalAce is your partner in achieving your English language goals.",
+    "contact": "Contact",
+    "company": "COMPANY",
+    "faq": "FAQ",
+    "about": "About",
+    "news": "News",
+    "license": "License",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "join": "Join us on",
+    "team": "Our Team"
+  }
+}

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0066ff;
+}
+
+h1 {
+  font-size: 2.5rem; /* Adjust as needed */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust as needed */
+}
+
+h3 {
+  font-size: 1.75rem; /* Adjust as needed */
+}
+
+h4 {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+h5 {
+  font-size: 1.25rem; /* Adjust as needed */
+}
+
+h6 {
+  font-size: 1rem; /* Adjust as needed */
+}

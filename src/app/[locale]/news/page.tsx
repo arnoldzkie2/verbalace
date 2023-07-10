@@ -3,7 +3,7 @@ import NewsFooter from '@/components/web/news/NewsFooter';
 import NewsHeader from '@/components/web/news/NewsHeader';
 import NewsMain from '@/components/web/news/NewsMain';
 import ReadMore from '@/components/web/news/ReadMore';
-import axios from 'axios';
+import { getAllNews } from '@/lib/news/news';
 import React from 'react';
 
 interface PageProps {
@@ -34,22 +34,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     }
 }
 
-const getAllNews = async () => {
-
-    try {
-
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news?department=${process.env.NEXT_PUBLIC_DEPARTMENT}`)
-
-        if (data.success) return data.data
-
-    } catch (error) {
-
-        console.log(error);
-
-    }
-
-}
-
 export const revalidate = 43200
 
 const Page: React.FC<PageProps> = async ({ }) => {
@@ -57,7 +41,7 @@ const Page: React.FC<PageProps> = async ({ }) => {
     const news = await getAllNews()
 
     return (
-        <div className='overflow-x-hidden bg-slate-50'>
+        <div className='overflow-x-hidden bg-slate-100'>
 
             <NewsHeader />
 

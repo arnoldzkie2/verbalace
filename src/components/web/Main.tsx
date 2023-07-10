@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
 import { useTranslations } from 'next-intl';
 import React from 'react';
 import { Link } from 'react-scroll';

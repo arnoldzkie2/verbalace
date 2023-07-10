@@ -1,4 +1,3 @@
-'use client'
 /* eslint-disable @next/next/no-img-element */
 import About from '@/components/web/About';
 import Contact from '@/components/web/Contact';
@@ -9,6 +8,7 @@ import Services from '@/components/web/Services';
 import React from 'react';
 
 interface AppProps {
+
 }
 
 const App: React.FC<AppProps> = ({ }) => {

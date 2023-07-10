@@ -2,13 +2,13 @@
 import NewsHeader from '@/components/web/news/NewsHeader';
 import axios from 'axios';
 import React from 'react';
-import Link from 'next/link'
 import NewsFooter from '@/components/web/news/NewsFooter';
 import 'react-quill/dist/quill.snow.css'
 import { notFound } from 'next/navigation';
 import ReadMore from '@/components/web/news/ReadMore';
 import SingleNews from '@/components/web/news/SingleNews';
 import LatestNews from '@/components/web/news/LatestNews';
+import { getAllNews, getSingleNews } from '@/lib/news/news';
 
 interface PageProps {
     params: {
@@ -19,7 +19,7 @@ interface PageProps {
 
 export const revalidate = 43200
 
-export async function generateStaticParams() {
+export const generateStaticParams = async() => {
 
     try {
 
@@ -50,7 +50,7 @@ const generateDescription = (news: NewsType, locale: string) => {
     }
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export const generateMetadata = async({ params }: PageProps) => {
 
     const news: NewsType = await getSingleNews(params.id);
 
@@ -66,23 +66,6 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 
-
-const getSingleNews = async (id: string) => {
-
-    try {
-
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news?id=${id}`)
-
-        if (data.success) return data.data
-
-    } catch (error) {
-
-        console.log(error);
-
-    }
-
-}
-
 interface NewsType {
     id: string
     author: string
@@ -92,34 +75,18 @@ interface NewsType {
     date: string
 }
 
-const getAllNews = async () => {
-
-    try {
-
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news?department=${process.env.NEXT_PUBLIC_DEPARTMENT}`)
-
-        if (data.success) return data.data
-
-    } catch (error) {
-
-        console.log(error);
-
-    }
-
-}
-
 const Page: React.FC<PageProps> = async ({ params }) => {
 
     const allNews: NewsType[] = await getAllNews()
 
-    const news: NewsType = await getSingleNews(params.id)
+    const singleNews: NewsType = await getSingleNews(params.id)
 
-    if (!news) return notFound()
+    if (!singleNews) return notFound()
 
     return (
         <div className='overflow-x-hidden bg-slate-200 flex flex-col items-center'>
             <NewsHeader />
-            <SingleNews news={news} />
+            <SingleNews news={singleNews} />
             <LatestNews news={allNews}/>
             <ReadMore news={allNews} />
             <NewsFooter />

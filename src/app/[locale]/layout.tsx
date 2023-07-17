@@ -10,7 +10,7 @@ interface Props {
 }
 export function generateStaticParams() {
 
-  const allTranslation = ['en', 'cn', 'jp', 'kr', 'vn']
+  const allTranslation = ['en', 'zh', 'ja', 'kr', 'vi']
 
   return allTranslation.map((lang) => ({
     locale: lang
@@ -28,17 +28,17 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title = 'VerbalAce | Enhance Your English Speaking Skills | Expert Online Tutoring';
     description = 'VerbalAce offers expert online English tutoring aimed at improving your oral English skills. Experience personalized one-on-one teaching that empowers you to communicate confidently in English. Whether you\'re preparing for IELTS/TOEFL or need to enhance your Business English, VerbalAce is your partner in achieving your English language goals.';
     keywords = 'English Learning, English Tutoring, Online English Classes, Verbal English, Business English, Conversation English, IELTS, TOEFL, One-on-One Teaching, Personalized Learning, Oral English Improvement';
-  } else if (params.locale === 'cn') {
+  } else if (params.locale === 'zh') {
     // Chinese
     title = 'VerbalAce | 提高您的英语口语技能 | 专业在线辅导';
     description = 'VerbalAce提供专业的在线英语辅导，旨在提高您的英语口语技能。体验一对一的个性化教学，让您能够自信地用英语交流。无论您是在准备雅思/托福考试，还是需要提高您的商务英语，VerbalAce都是您实现英语口语目标的伙伴。';
     keywords = '学习英语, 英语辅导, 在线英语课程, 英语口语, 商务英语, 日常英语, 雅思, 托福, 一对一教学, 个性化学习, 口语英语提高, 菲律宾老师, 菲教';
-  } else if (params.locale === 'vn') {
+  } else if (params.locale === 'vi') {
     // Vietnamese
     title = 'VerbalAce | Cải thiện kỹ năng nói tiếng Anh của bạn | Hướng dẫn trực tuyến chuyên nghiệp';
     description = 'VerbalAce cung cấp hướng dẫn tiếng Anh trực tuyến chuyên nghiệp, nhằm cải thiện kỹ năng nói tiếng Anh của bạn. Trải nghiệm học tập cá nhân qua giáo dục một-đối-một, giúp bạn tự tin giao tiếp bằng tiếng Anh. Dù bạn đang chuẩn bị cho kỳ thi IELTS/TOEFL hay cần cải thiện tiếng Anh thương mại của mình, VerbalAce là đối tác giúp bạn đạt được mục tiêu tiếng Anh.';
     keywords = 'học tiếng Anh, hướng dẫn tiếng Anh, khóa học tiếng Anh trực tuyến, tiếng Anh thông thạo, tiếng Anh thương mại, tiếng Anh giao tiếp, IELTS, TOEFL, giáo dục cá nhân, học tập cá nhân, cải thiện tiếng Anh';
-  } else if (params.locale === 'jp') {
+  } else if (params.locale === 'ja') {
     // Japanese
     title = 'VerbalAce | あなたの英会話力を向上させる | プロのオンラインチュータリング';
     description = 'VerbalAceは、あなたの英会話力を向上させることを目指すプロのオンライン英語チュータリングを提供します。ワンツーワンの個別教育を体験し、自信を持って英語でコミュニケーションを取ることができます。あなたがIELTS/TOEFL試験の準備をしているか、ビジネス英語を向上させる必要があるかにかかわらず、VerbalAceはあなたの英語の目標を達成するパートナーです。';

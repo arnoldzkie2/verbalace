@@ -55,13 +55,13 @@ export const generateMetadata = async ({ params }: PageProps) => {
             case '':
                 description = `All news related to ${decodedKeyword} keyword.`;
                 break;
-            case 'jp':
+            case 'ja':
                 description = `「${decodedKeyword}」キーワードに関連するすべてのニュースです。`;
                 break;
-            case 'cn':
+            case 'zh':
                 description = `所有与关键词「${decodedKeyword}」相关的新闻。`;
                 break;
-            case 'vn':
+            case 'vi':
                 description = `Tất cả tin tức liên quan đến từ khóa "${decodedKeyword}".`;
                 break;
             case 'kr':

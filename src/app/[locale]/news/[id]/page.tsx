@@ -37,13 +37,13 @@ export const generateStaticParams = async() => {
 
 const generateDescription = (news: NewsType, locale: string) => {
     switch (locale) {
-        case 'cn':
+        case 'zh':
             return `新闻标题: ${news.title} | 作者: ${news.author} | 日期: ${news.date}（中文翻译）`;
-        case 'jp':
+        case 'ja':
             return `ニュースタイトル: ${news.title} | 作者: ${news.author} | 日付: ${news.date}（日本語訳）`;
         case 'kr':
             return `뉴스 제목: ${news.title} | 작성자: ${news.author} | 날짜: ${news.date}（한국어 번역）`;
-        case 'vn':
+        case 'vi':
             return `Tiêu đề tin: ${news.title} | Tác giả: ${news.author} | Ngày: ${news.date}（Tiếng Việt dịch）`;
         default:
             return `News Title: ${news.title} | Author: ${news.author} | Date: ${news.date}`;

@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                 <ul className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
                     <li className='text-blue-600 font-black text-xl md:text-2xl'>VERBAL-ACE</li>
                     <li className='text-sm leading-6'>{footer('description')}</li>
-                    <ScrollLink to='about' duration={1000} smooth={true} className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
+                    <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
                 </ul>
 
                 <ul className='flex flex-col gap-4'>
@@ -43,8 +43,8 @@ const Footer: React.FC<FooterProps> = ({ }) => {
 
                 <ul className='flex items-center gap-4 md:gap-3 md:flex-col md:items-start'>
                     <li className='text-lg font-medium text-blue-600 md:mb-2'>{footer('company')}</li>
-                    <ScrollLink to='about' duration={1000} smooth={true} className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
-                    <ScrollLink to='contact' duration={1000} smooth={true} className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
+                    <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
+                    <ScrollLink to='contact' duration={1000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
                     <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>
                     <Link href={'/news'} className='text-sm lg:text-base hover:text-blue-600' >{footer('news')}</Link>
                 </ul>

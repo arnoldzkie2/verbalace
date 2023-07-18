@@ -57,7 +57,10 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title,
     description,
-    keywords
+    keywords,
+    icons: {
+      icon: '/favicon.png'
+    }
   };
 }
 

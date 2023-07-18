@@ -19,11 +19,11 @@ const Footer: React.FC<FooterProps> = ({ }) => {
         <footer className='px-5 sm:px-10 md:px-16 lg:px-24 pt-16 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
-                <ul className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                    <li className='text-blue-600 font-black text-xl md:text-2xl'>VERBAL-ACE</li>
-                    <li className='text-sm leading-6'>{footer('description')}</li>
+                <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
+                    <h1 className='text-blue-600 font-black text-xl md:text-2xl'>VERBAL-ACE</h1>
+                    <p className='text-sm leading-6'>{footer('description')}</p>
                     <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
-                </ul>
+                </div>
 
                 <ul className='flex flex-col gap-4'>
                     <li className='text-lg font-medium md:mb-2 text-blue-600 uppercase'>{footer('contact')}</li>
@@ -43,10 +43,18 @@ const Footer: React.FC<FooterProps> = ({ }) => {
 
                 <ul className='flex items-center gap-4 md:gap-3 md:flex-col md:items-start'>
                     <li className='text-lg font-medium text-blue-600 md:mb-2'>{footer('company')}</li>
-                    <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
-                    <ScrollLink to='contact' duration={1000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
-                    <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>
-                    <Link href={'/news'} className='text-sm lg:text-base hover:text-blue-600' >{footer('news')}</Link>
+                    <li>
+                        <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to='contact' duration={1000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
+                    </li>
+                    <li>
+                        <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>
+                    </li>
+                    <li>
+                        <Link href={'/news'} className='text-sm lg:text-base hover:text-blue-600' >{footer('news')}</Link>
+                    </li>
                 </ul>
 
             </nav>
@@ -58,11 +66,19 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                     <Link href='/privacy'>{footer('privacy')}</Link>
                 </div>
                 <ul className='flex gap-5 items-center order-1 md:order-2'>
-                    <li className='font-medium text-gray-400'>{footer('join')}</li>
-                    <a href="/"><img className='w-4 h-4' src="/web/social/facebook.svg" alt="Facebook" /></a>
-                    <a href="/"><img className='w-4 h-4' src="/web/social/instagram.svg" alt="Instagram" /></a>
-                    <a href="/"><img className='w-4 h-4' src="/web/social/google.svg" alt="Google" /></a>
-                    <a href="/"><img className='w-4 h-4' src="/web/social/twitter.svg" alt="Twitter" /></a>
+                    <li className='font-medium text-gray-600'>{footer('join')}</li>
+                    <li>
+                        <a href="https://www.facebook.com/"><img className='w-4 h-4' src="/web/social/facebook.svg" alt="Facebook" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/"><img className='w-4 h-4' src="/web/social/instagram.svg" alt="Instagram" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/"><img className='w-4 h-4' src="/web/social/google.svg" alt="Google" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/"><img className='w-4 h-4' src="/web/social/twitter.svg" alt="Twitter" /></a>
+                    </li>
                 </ul>
             </div>
         </footer>

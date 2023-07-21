@@ -14,7 +14,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
     const t = useTranslations('contact')
 
     return (
-        <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat md:h-screen bg-cover w-screen flex items-center justify-center py-10 flex-col px-5 sm:px-10 md:px-16 lg:px-24 gap-10 md:gap-16 lg:gap-24'>
+        <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-10 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
 
             <header className='flex flex-col items-center text-center gap-3 sm:gap-4'>
                 <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight' >{t('h1')}</h1>
@@ -24,20 +24,21 @@ const Contact: React.FC<ContactProps> = ({ }) => {
             <div className='flex flex-col w-full gap-5 sm:items-center md:flex-row md:justify-between lg:justify-evenly'>
 
                 <aside className='flex flex-col gap-3 md:gap-5'>
-                    <img src="/web/contact/contact-img.png" alt="Contact Us" className='lg:h-72 sm:h-52' />
-                    <h1 className='text-white text-2xl md:text-3xl md:text-gray-700 md:border-gray-300 lg:mt-4 font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
-                    <div className='flex w-full flex-col gap-3'>
-                        <div className='flex items-center gap-4'>
+                    <img src="/web/contact/contact-img.png" alt="Contact Us" className='lg:h-64 sm:h-52' />
+                    <h1 className='text-white text-2xl md:text-3xl lg:text-gray-800 md:border-gray-300 2xl:text-white lg:mt-4 font-light md:font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
+                    <div className='flex w-full flex-col gap-5'>
+                        <div className='flex gap-4'>
                             <FontAwesomeIcon icon={faPhoneVolume} className='w-5 h-5 p-2 border border-blue-600 bg-white rounded-full text-blue-600' />
-                            <div className='text-white md:text-gray-700'>+1-234-567-8900</div>
+                            <ul className='text-white md:text-gray-700 flex flex-col gap-3'>
+                                <li>China: +86 133 8613 7953</li>
+                                <li>Philipines: +63 9979 1572 44</li>
+                                <li>HongKong +852 5518 0295</li>
+                                <li>United States +1 503 209 9138</li>
+                            </ul>
                         </div>
                         <div className='flex items-center gap-4'>
                             <FontAwesomeIcon icon={faEnvelope} className='w-5 h-5 p-2 border border-blue-600 bg-white rounded-full text-blue-600' />
-                            <div className='text-white md:text-gray-700'>verbaleace@gmail.com</div>
-                        </div>
-                        <div className='flex items-center gap-4'>
-                            <FontAwesomeIcon icon={faLocationDot} className='w-5 h-5 p-2 border border-blue-600 bg-white rounded-full text-blue-600' />
-                            <div className='text-white md:text-gray-700'>931 Abia Martin Drive, PA TestLocation-191420</div>
+                            <div className='text-white md:text-gray-700'>support@verbalace.com</div>
                         </div>
                     </div>
                 </aside>

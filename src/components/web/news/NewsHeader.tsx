@@ -23,7 +23,7 @@ const NewsHeader: React.FC<HeaderProps> = ({ }) => {
     const t = useTranslations('header')
 
     return (
-        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24  h-16 fixed w-screen transition duration-200 flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
+        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 h-16 fixed w-screen transition duration-200 flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
             <Link href={'/'} className={`lg:w-64 font-black text-2xl md:text-3xl ${scroll && 'text-blue-600'}`}>VERBAL-ACE</Link>
             <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className={`text-xl lg:hidden absolute cursor-pointer right-5 md:right-16 ${isOpen ? 'text-gray-600 z-10' : ''}`} onClick={() => setIsOpen(prevState => !prevState)} />
             <ul className={`w-full lg:flex lg:items-center lg:gap-5 ${isOpen ? 'gap-3 shadow-2xl flex flex-col fixed top-0 left-0 w-screen bg-white p-10 text-gray-600' : 'hidden'}`}>

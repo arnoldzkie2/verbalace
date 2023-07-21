@@ -16,7 +16,7 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
     const footer = useTranslations('footer')
 
     return (
-        <footer className='px-5 sm:px-10 md:px-16 lg:px-24 pt-16 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
+        <footer className='px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 pt-16 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
@@ -37,7 +37,7 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
                     </li>
                     <li className='flex items-center gap-4'>
                         <FontAwesomeIcon icon={faEnvelope} className='w-4' />
-                        <p className='text-sm lg:text-base'>verbalace@gmail.com</p>
+                        <p className='text-sm lg:text-base'>support@verbalace.com</p>
                     </li>
                 </ul>
 

@@ -81,6 +81,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale}>
+      <meta name="google-site-verification" content="GPPohusFE-I-wSDhkrC948VQHdCtwLAGJruLmQVpRwQ" />
       <body>
         <NextIntlClientProvider locale={locale} messages={translation}>
           {children}

@@ -8,7 +8,7 @@ const About: React.FC = ({ }) => {
     const t = useTranslations('about')
 
     return (
-        <section className='px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 flex items-center gap-10 md:gap-16 text-gray-700 py-16 flex-col' id='about'>
+        <section className='py-20 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 flex items-center gap-10 md:gap-16 text-gray-700 flex-col' id='about'>
             <h1 className='text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight 2xl:hidden'>{t('h1')}</h1>
             <div className='flex flex-col gap-5 sm:gap-10 md:gap-16 xl:gap-20 items-center 2xl:flex-row lg:justify-between'>
                 <video className='w-full 2xl:w-2/3 outline-none rounded-md' controls loop>

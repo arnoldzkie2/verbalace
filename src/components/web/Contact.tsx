@@ -4,6 +4,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import React from 'react';
 
 interface ContactProps {
@@ -24,7 +25,8 @@ const Contact: React.FC<ContactProps> = ({ }) => {
             <div className='flex flex-col w-full gap-5 sm:items-center md:flex-row md:justify-between lg:justify-evenly'>
 
                 <aside className='flex flex-col gap-3 md:gap-5'>
-                    <img src="/web/contact/contact-img.png" alt="Contact Us" className='lg:h-64 sm:h-52' />
+                    <Image src={'/web/contact/contact-img.png'} alt='Contact us' width={350} height={350} />
+                    {/* <img src="/web/contact/contact-img.png" alt="Contact Us" className='lg:h-64 sm:h-52' /> */}
                     <h1 className='text-white text-2xl md:text-3xl lg:text-gray-800 md:border-gray-300 2xl:text-white lg:mt-4 font-light md:font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
                     <div className='flex w-full flex-col gap-5'>
                         <div className='flex gap-4'>

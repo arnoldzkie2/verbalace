@@ -31,7 +31,12 @@
   },
   "about": {
     "h1": "Chúng tôi là ai?",
-    "description": "Trong lĩnh vực phát triển bản thân và thăng tiến nghề nghiệp, việc thông thạo tiếng Anh chiếm vị trí trung tâm. Và đây là nơi VerbalAce tỏa sáng. VerbalAce dành riêng cho những người dám ước mơ lớn, những người luôn phấn đấu để đạt được sự xuất sắc trong công việc và cá nhân. Chúng tôi cung cấp các khóa học tiếng Anh có thể tùy chỉnh, giá cả phải chăng, tập trung chủ yếu vào việc nâng cao kỹ năng nói của bạn. Tại VerbalAce, chúng tôi hiểu sức mạnh của việc giảng dạy trực tiếp. Chúng tôi coi trọng sự độc đáo của mỗi người học và điều chỉnh các phương pháp của chúng tôi để đáp ứng nhu cầu cá nhân của bạn. Và với công nghệ AI được tích hợp vào chương trình giảng dạy của chúng tôi, tài liệu học tập được thiết kế riêng cho bạn, theo tốc độ của bạn, mọi lúc, mọi nơi. Trở thành át chủ bài của câu chuyện của riêng bạn. Với VerbalAce, bạn đang tiến một bước gần hơn để nắm bắt những cơ hội nghề nghiệp quốc tế đó và đạt được mục tiêu học ngôn ngữ của mình. Bắt đầu hành trình làm chủ của bạn với VerbalAce."
+    "description": {
+      "1": "Trong lĩnh vực phát triển cá nhân và thăng tiến sự nghiệp, việc thành thạo tiếng Anh chiếm vị trí trung tâm. Đây cũng chính là nơi mà VerbalAce tỏa sáng.",
+      "2": "VerbalAce dành riêng cho những người dám mơ lớn, những người phấn đấu vì sự xuất sắc cá nhân và chuyên nghiệp. Chúng tôi cung cấp các khóa học tiếng Anh có giá phải chăng, có thể tùy chỉnh, tập trung chủ yếu vào cải thiện kỹ năng giao tiếp.",
+      "3": "Tại VerbalAce, chúng tôi hiểu được sức mạnh của việc giảng dạy một kèm một. Chúng tôi coi trọng sự độc nhất vô nhị của từng học viên và điều chỉnh phương pháp dạy học để đáp ứng nhu cầu cá nhân của bạn. Và với công nghệ trí tuệ nhân tạo tích hợp vào chương trình học, tài liệu học tập được tùy chỉnh cho bạn, theo từng bước tiến của bạn, bất kỳ lúc nào, bất kỳ đâu.",
+      "4": "Trở thành bậc thầy của câu chuyện riêng của bạn. Với VerbalAce, bạn càng gần hơn một bước đạt được những cơ hội nghề nghiệp quốc tế và hoàn thành mục tiêu học ngôn ngữ của mình. Bắt đầu hành trình chinh phục với VerbalAce."
+    }
   },
   "contact": {
     "h1": "Có câu hỏi gì không?",

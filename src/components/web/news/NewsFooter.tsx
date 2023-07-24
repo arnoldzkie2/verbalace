@@ -1,7 +1,7 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {  faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
@@ -16,6 +16,7 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
     const footer = useTranslations('footer')
 
     return (
+        
         <footer className='px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 pt-16 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
@@ -27,13 +28,21 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
 
                 <ul className='flex flex-col gap-4'>
                     <li className='text-lg font-medium md:mb-2 text-blue-600 uppercase'>{footer('contact')}</li>
-                    <li className='flex items-center gap-4'>
-                        <FontAwesomeIcon icon={faLocationDot} className='w-4' />
-                        <p className='text-sm lg:text-base'>Via Rossani 10, 10136 Test Location</p>
-                    </li>
-                    <li className='flex items-center gap-4'>
+                    <li className='flex gap-4'>
                         <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>+1 234-567-8900</p>
+                        <p className='text-sm lg:text-base'>China: +86 133 8613 7953</p>
+                    </li>
+                    <li className='flex gap-4'>
+                        <FontAwesomeIcon icon={faPhone} className='w-4' />
+                        <p className='text-sm lg:text-base'>Philipines: +63 9979 1572 44 0</p>
+                    </li>
+                    <li className='flex gap-4'>
+                        <FontAwesomeIcon icon={faPhone} className='w-4' />
+                        <p className='text-sm lg:text-base'>HongKong +852 5518 0295</p>
+                    </li>
+                    <li className='flex gap-4'>
+                        <FontAwesomeIcon icon={faPhone} className='w-4' />
+                        <p className='text-sm lg:text-base'>United States +1 503 209 9138</p>
                     </li>
                     <li className='flex items-center gap-4'>
                         <FontAwesomeIcon icon={faEnvelope} className='w-4' />
@@ -70,16 +79,13 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
                 <ul className='flex gap-5 items-center order-1 md:order-2'>
                     <li className='font-medium text-gray-600'>{footer('join')}</li>
                     <li>
-                        <a href="https://www.facebook.com/"><img className='w-4 h-4' src="/web/social/facebook.svg" alt="Facebook" /></a>
+                        <a href="https://facebook.com/JoinVerbalAce"><img className='w-4 h-4' src="/web/social/facebook.svg" alt="Facebook" /></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/"><img className='w-4 h-4' src="/web/social/instagram.svg" alt="Instagram" /></a>
+                        <a href="https://www.youtube.com/@VerbalAce/"><img className='w-4 h-4' src="/web/social/youtube.svg" alt="Youtube" /></a>
                     </li>
                     <li>
-                        <a href="https://www.google.com/"><img className='w-4 h-4' src="/web/social/google.svg" alt="Google" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com/"><img className='w-4 h-4' src="/web/social/twitter.svg" alt="Twitter" /></a>
+                        <a href="https://twitter.com/VerbalAce_CEO"><img className='w-4 h-4' src="/web/social/twitter.svg" alt="Twitter" /></a>
                     </li>
                 </ul>
             </div>

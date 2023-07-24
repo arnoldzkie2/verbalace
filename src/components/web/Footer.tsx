@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                         <a href="https://facebook.com/JoinVerbalAce"><img className='w-4 h-4' src="/web/social/facebook.svg" alt="Facebook" /></a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/@VerbalAce/"><img className='w-4 h-4' src="/web/social/google.svg" alt="Google" /></a>
+                        <a href="https://www.youtube.com/@VerbalAce/"><img className='w-4 h-4' src="/web/social/youtube.svg" alt="Youtube" /></a>
                     </li>
                     <li>
                         <a href="https://twitter.com/VerbalAce_CEO"><img className='w-4 h-4' src="/web/social/twitter.svg" alt="Twitter" /></a>

@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     keywords,
     icons: {
       icon: '/favicon.png'
-    }
+    },
   };
 }
 
@@ -81,6 +81,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
 
   return (
     <html lang={locale}>
+      <meta name='theme-color' content='#2563eb' />
       <meta name="google-site-verification" content="GPPohusFE-I-wSDhkrC948VQHdCtwLAGJruLmQVpRwQ" />
       <body>
         <NextIntlClientProvider locale={locale} messages={translation}>

@@ -15,8 +15,8 @@ const Main: React.FC<MainProps> = ({ }) => {
     return (
         <main className="bg-[url(/web/home.svg)] z-10 bg-center bg-no-repeat bg-cover flex-col md:flex-row md:justify-between gap-10 px-5 pt-24 md:pt-0 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 w-screen sm:h-screen flex items-center" id='home'>
             <div className='flex flex-col gap-4 w-full xl:w-1/2 md:gap-5 lg:gap-6 text-center md:text-left px-3 md:px-0 items-center md:items-start'>
-                <h1 className='text-white text-3xl lg:text-5xl md:text-4xl font-light lg:font-extralight'>{main('h1')}</h1>
-                <h2 className='text-slate-50 leading-6 md:leading-8 text-sm'>{main('h2')}</h2>
+                <h1 className='text-white text-3xl lg:text-5xl xl:text-6xl md:text-4xl font-light lg:font-extralight'>{main('h1')}</h1>
+                <h2 className='text-slate-50 leading-6 md:leading-8 text-sm md:text-base'>{main('h2')}</h2>
                 <div className='flex items-center gap-4'>
                     <div className='w-6 h-1.5 cursor-pointer bg-slate-300 rounded-sm'></div>
                     <div className='w-6 h-1.5 cursor-pointer bg-slate-300 rounded-sm'></div>
@@ -29,7 +29,7 @@ const Main: React.FC<MainProps> = ({ }) => {
                     {main('button')}</Link>
             </div>
 
-            <Image src={'/web/hero.png'} alt='Hero' width={420} height={420} className='bg-white w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96 2xl:w-auto 2xl:h-auto 2xl:max-w-xl rounded-full shadow-xl' />
+            <Image src={'/web/hero.png'} alt='Hero' width={420} height={420} className='bg-white w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96 2xl:w-auto 2xl:h-auto 2xl:max-w-md rounded-full shadow-xl' />
 
         </main>
     );

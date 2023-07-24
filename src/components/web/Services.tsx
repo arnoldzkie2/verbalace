@@ -14,7 +14,7 @@ const Services: React.FC<ServicesProps> = ({ }) => {
 
     return (
         <section id='services' className='py-20 flex items-center flex-col gap-10 lg:gap-16 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44'>
-            <h1 className='text-gray-700 text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight pb-8 mb-8 border-b 2xl:hidden'>{t('offer')}</h1>
+            <h1 className='text-gray-700 text-3xl md:text-4xl lg:text-5xl  font-light lg:font-extralight pb-8 mb-8 border-b 2xl:hidden'>{t('offer')}</h1>
             <div className='flex flex-col 2xl:flex-row 2xl:justify-around items-center xl:gap-20 w-full'>
                 <Image src={'/web/services/service.png'} alt='Our Services' width={730} height={730} className='w-80 h-80 sm:h-auto sm:max-w-md sm:w-auto md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl md:h-auto' />
                 {/* <img src="/web/services/service.png" alt="Our Services" className='w-full xl:pb-0 xl:mb-0 xl:border-none sm:pb-8 sm:mb-8 sm:w-5/6 md:w-2/3 xl:w-7/12 pb-5 mb-5 border-b' /> */}

@@ -1,6 +1,6 @@
 'use client'
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import Translate from '../Translate';
 import { Link as ScrollLink } from 'react-scroll'
@@ -30,7 +30,6 @@ const NewsHeader: React.FC<HeaderProps> = ({ }) => {
                 <Link href='/' className='lg:ml-auto px-3 lg:px-2 xl:px-4 py-1.5 rounded-2xl cursor-pointer hover:text-blue-600'>{t('home')}</Link>
                 <Link href='/news' className='px-3 lg:px-2 xl:px-4 py-1.5 rounded-2xl cursor-pointer hover:text-blue-600'>{t('news')}</Link>
                 <div className={`${isOpen ? 'mt-5' : ''} flex gap-5 items-center lg:gap-8  lg:ml-auto`}>
-                    <ScrollLink to='contact' duration={1000} smooth={true} className={`hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400 hover:text-white border px-5 lg:px-5 py-1.5 cursor-pointer flex items-center justify-center rounded-3xl ${scroll ? 'bg-blue-600 text-white' : 'bg-white text-blue-600'}`}>{t('waitlist')}</ScrollLink>
                     <Translate locale={locale} scroll={scroll} isOpen={isOpen} />
                 </div>
             </ul>

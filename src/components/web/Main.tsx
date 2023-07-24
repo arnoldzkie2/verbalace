@@ -2,7 +2,7 @@
 'use client'
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
 interface MainProps {
@@ -28,8 +28,9 @@ const Main: React.FC<MainProps> = ({ }) => {
                     className='bg-white cursor-pointer mt-3 md:mt-5 lg:px-5 xl:px-7 text-blue-600 hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400 border border-white hover:text-white  py-2 px-3 text-sm rounded-3xl shadow-sm'>
                     {main('button')}</Link>
             </div>
-            <Image src={'/web/hero.png'} alt='Hero' width={390} height={390} className='bg-white rounded-full shadow-xl' />
-            {/* <img src="/web/hero.png" alt="Teacher" className='w-64 sm:w-72 md:w-2/3 xl:w-1/2 bg-white shadow-xl rounded-full' /> */}
+
+            <Image src={'/web/hero.png'} alt='Hero' width={420} height={420} className='bg-white w-72 h-72 sm:w-80 sm:h-80 xl:w-96 xl:h-96 2xl:w-auto 2xl:h-auto 2xl:max-w-xl rounded-full shadow-xl' />
+
         </main>
     );
 };

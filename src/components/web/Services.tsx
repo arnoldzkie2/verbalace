@@ -35,8 +35,8 @@ const Services: React.FC<ServicesProps> = ({ }) => {
                     <div data-aos="fade-up" className='hover:shadow-md flex items-center flex-col sm:flex-row lg:w-5/6 2xl:w-full gap-4 p-4 border'>
                         <Image src={'/web/services/service2.webp'} alt='Service 2' width={144} height={144} />
                         <div className='text-gray-600 sm:text-left text-center 2xl:items-start flex gap-3 flex-col w-5/6 md:w-2/3 2xl:w-5/6'>
-                            <h1 className='font-medium text-xl text-blue-600 lg:text-2xl mt-auto'>{t('3.h1')}</h1>
-                            <p className='text-sm md:text-base'>{t('3.p')}</p>
+                            <h1 className='font-medium text-xl text-blue-600 lg:text-2xl mt-auto'>{t('2.h1')}</h1>
+                            <p className='text-sm md:text-base'>{t('2.p')}</p>
                         </div>
                     </div>
 

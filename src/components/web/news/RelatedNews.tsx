@@ -121,12 +121,12 @@ const RelatedNews: React.FC<AllNewsProps> = ({ news }) => {
                             <Link
                                 key={newsItem.id}
                                 href={`/news/${newsItem.id}`}
-                                className='md:w-2/5 rounded-lg border-t-2 bg-white border-blue-600 p-5 shadow-md hover:scale-105 duration-150 flex flex-col gap-5 md:gap-8'
+                                className='sm:w-2/5 rounded-lg border-t-2 bg-white border-blue-600 p-5 shadow-md hover:scale-105 duration-150 flex flex-col gap-5 md:gap-8'
                             >
-                                <h1 className='text-xl font-medium text-gray-900'>{newsItem.title && newsItem.title}</h1>
+                                <h1 className='text-base md:text-lg lg:text-xl font-medium text-gray-900'>{newsItem.title && newsItem.title}</h1>
                                 <div className='w-full flex justify-between'>
-                                    <div className='font-bold'>{newsItem.author && newsItem.author}</div>
-                                    <div className='text-gray-600'>{timeAgo}</div>
+                                    <div className='font-bold text-sm md:text-base'>{newsItem.author && newsItem.author}</div>
+                                    <div className='text-gray-600 text-sm md:text-base'>{timeAgo}</div>
                                 </div>
                             </Link>
                         );

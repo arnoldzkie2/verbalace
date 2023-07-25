@@ -52,10 +52,10 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                 <ul className='flex items-center gap-4 md:gap-3 md:flex-col md:items-start'>
                     <li className='text-lg font-medium text-blue-600 md:mb-2'>{footer('company')}</li>
                     <li>
-                        <ScrollLink to='about' duration={2000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
+                        <ScrollLink to='about' duration={2000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >{footer('about')}</ScrollLink>
                     </li>
                     <li>
-                        <ScrollLink to='contact' duration={2000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
+                        <ScrollLink to='contact' duration={2000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >{footer('contact')}</ScrollLink>
                     </li>
                     <li>
                         <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>

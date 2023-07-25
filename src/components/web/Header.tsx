@@ -44,9 +44,9 @@ const Header: React.FC<HeaderProps> = ({ }) => {
     const t = useTranslations('header')
 
     return (
-        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 h-16 fixed w-screen flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
+        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 h-16 md:h-20 fixed w-screen flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
             <Link href={'/'} className='flex items-center'>
-                <Image src={'/logo.png'} alt='Logo' width={160} height={30} className='w-36 md:w-40' />
+                <Image src={'/logo.png'} alt='Logo' width={160} height={30} className='w-36 md:w-40 pb-1.5 md:pb-4' />
             </Link>
             <div className='absolute right-6 z-10 cursor-pointer lg:hidden sm:right-10 md:right-16' onClick={() => setIsOpen(prevState => !prevState)}>
                 {isOpen ?

@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll'
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface FooterProps {
 }
@@ -16,15 +17,14 @@ const Footer: React.FC<FooterProps> = ({ }) => {
     const footer = useTranslations('footer')
 
     return (
-        <footer className='px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 py-8 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
+        <footer className='px-5 sm:px-10 md:px-16 py-5 lg:py-10 lg:px-24 xl:px-36 2xl:px-44 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
 
-            <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
+            <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                <Link href={'/'} className={`lg:w-64 font-bold text-2xl text-blue-600`}>verbalace</Link>
-                        <p className='text-sm leading-6'>{footer('description')}</p>
-                    <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
+                    <Image src={'/logo.png'} alt='Logo' width={150} height={10} className='h-auto' />
+                    <p className='text-sm leading-6'>{footer('description')}</p>
+                    <ScrollLink to='about' duration={2000} smooth={true} href='#about' className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
                 </div>
-
                 <ul className='flex flex-col gap-4'>
                     <li className='text-lg font-medium md:mb-2 text-blue-600 uppercase'>{footer('contact')}</li>
                     <li className='flex gap-4'>
@@ -52,10 +52,10 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                 <ul className='flex items-center gap-4 md:gap-3 md:flex-col md:items-start'>
                     <li className='text-lg font-medium text-blue-600 md:mb-2'>{footer('company')}</li>
                     <li>
-                        <ScrollLink to='about' duration={1000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
+                        <ScrollLink to='about' duration={2000} smooth={true} href='#about' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >About</ScrollLink>
                     </li>
                     <li>
-                        <ScrollLink to='contact' duration={1000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
+                        <ScrollLink to='contact' duration={2000} smooth={true} href='#contact' className='text-sm lg:text-base hover:text-blue-600 cursor-pointer' >Contact</ScrollLink>
                     </li>
                     <li>
                         <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>
@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                 </ul>
 
             </nav>
-            <div className='py-10 w-full border-t flex flex-col gap-5 md:flex-row md:justify-between'>
+            <div className='pt-10 w-full border-t flex flex-col gap-5 md:flex-row md:justify-between'>
                 <div className='flex gap-4 items-center order-2 md:order-1 text-sm md:text-base'>
                     © 2023, verbalace
                     <Link href='/license'>{footer('license')}</Link>

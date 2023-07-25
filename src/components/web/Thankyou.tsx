@@ -7,7 +7,7 @@ const Thankyou = () => {
 
     const t = useTranslations('thankyou')
     return (
-        <section className='py-24 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 flex flex-col items-center text-gray-700 gap-10'>
+        <section className='py-10 lg:py-20 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 flex flex-col items-center text-gray-700 gap-10'>
             <h1 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light lg:font-extralight mb-5 pb-5 border-b'>{t('h1')}</h1>
             <p className='text-center text-sm md:text-base'>{t('h2')}</p>
             <div className='flex items-center gap-5'>

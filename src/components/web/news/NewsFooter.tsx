@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import React from 'react';
-
+import Image from 'next/image';
 interface FooterProps {
 
 }
@@ -21,7 +21,7 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                <Link href={'/'} className={`lg:w-64 font-bold text-2xl text-blue-600`}>verbalace</Link>
+                <Image src={'/logo.png'} alt='Logo' width={150} height={10} className='h-auto' />
                     <p className='text-sm leading-6'>{footer('description')}</p>
                     <Link href={'/about'} className='font-medium text-blue-600 cursor-pointer' >{footer('team')}</Link>
                 </div>
@@ -53,10 +53,10 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
                 <ul className='flex items-center gap-4 md:gap-3 md:flex-col md:items-start'>
                     <li className='text-lg font-medium text-blue-600 md:mb-2'>{footer('company')}</li>
                     <li>
-                        <Link href={'/about'} className='text-sm lg:text-base hover:text-blue-600' >{footer('about')}</Link>
+                        <Link href={'/#about'} className='text-sm lg:text-base hover:text-blue-600' >{footer('about')}</Link>
                     </li>
                     <li>
-                        <Link href={'/contact'} className='text-sm lg:text-base hover:text-blue-600' >{footer('contact')}</Link>
+                        <Link href={'/#contact'} className='text-sm lg:text-base hover:text-blue-600' >{footer('contact')}</Link>
                     </li>
                     <li>
                         <Link href={'/faq'} className='text-sm lg:text-base hover:text-blue-600' >{footer('faq')}</Link>

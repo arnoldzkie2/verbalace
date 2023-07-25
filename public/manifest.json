@@ -6,43 +6,8 @@
         {
             "src": "/favicon.png",
             "type": "image/png",
-            "sizes": "72x72",
+            "sizes": "117x114",
             "purpose": "any maskable"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "96x96"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "128x128"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "144x144"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "152x152"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "384x384"
-        },
-        {
-            "src": "/favicon.png",
-            "type": "image/png",
-            "sizes": "512x512"
         }
     ],
     "start_url": "/",

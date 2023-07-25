@@ -1,7 +1,7 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import {  faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
@@ -16,12 +16,12 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
     const footer = useTranslations('footer')
 
     return (
-        
+
         <footer className='px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 pt-16 gap-5 flex w-screen flex-col items-center text-gray-600 bg-slate-50'>
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                <Image src={'/logo.png'} alt='Logo' width={150} height={10} className='h-auto' />
+                    <Image src={'/logo.png'} alt='Logo' width={128} height={10} className='w-32' />
                     <p className='text-sm leading-6'>{footer('description')}</p>
                     <Link href={'/about'} className='font-medium text-blue-600 cursor-pointer' >{footer('team')}</Link>
                 </div>

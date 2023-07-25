@@ -44,11 +44,24 @@ const Header: React.FC<HeaderProps> = ({ }) => {
     const t = useTranslations('header')
 
     return (
-        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 h-16 lg:h-20 fixed w-screen flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
+        <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 h-16 fixed w-screen flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
             <Link href={'/'} className='flex items-center'>
-                <Image src={'/logo.png'} alt='Logo' width={200} height={30} className='w-36 md:w-44 xl:w-52' />
+                <Image src={'/logo.png'} alt='Logo' width={160} height={30} className='w-36 md:w-40' />
             </Link>
-            <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className={`text-xl lg:hidden absolute cursor-pointer right-5 md:right-16 ${isOpen ? 'text-gray-600 z-10' : ''}`} onClick={() => setIsOpen(prevState => !prevState)} />
+            <div className='absolute right-6 z-10 cursor-pointer lg:hidden sm:right-10 md:right-16' onClick={() => setIsOpen(prevState => !prevState)}>
+                {isOpen ?
+                    <div className='relative w-6 h-6'>
+                        <span className={`bg-gray-700 w-full h-0.5 top-3 absolute rotate-45 rounded-md`}></span>
+                        <span className={`bg-gray-700 w-full h-0.5 top-3 absolute -rotate-45 rounded-md`}></span>
+                    </div>
+                    :
+                    <div className='relative w-6 h-6'>
+                        <span className={`${scroll ? 'bg-gray-700' : 'bg-white'} top-1 w-full h-0.5 absolute rounded-md`}></span>
+                        <span className={`${scroll ? 'bg-gray-700' : 'bg-white'} top-3 w-full h-0.5 absolute rounded-md`}></span>
+                        <span className={`${scroll ? 'bg-gray-700' : 'bg-white'} top-5 w-full h-0.5 absolute rounded-md`}></span>
+                    </div>
+                }
+            </div>
             <ul className={`w-full lg:flex lg:items-center lg:gap-5 ${isOpen ? 'gap-3 shadow-2xl flex flex-col fixed top-0 left-0 w-screen bg-white p-10 text-gray-600' : 'hidden'}`}>
                 <ScrollLink to='about' duration={2000} smooth={true} href='#about' className={`lg:ml-auto px-3 lg:px-2 xl:px-4 py-1.5 rounded-2xl cursor-pointer ${scroll && 'hover:text-blue-600'}`}>{t('about')}</ScrollLink>
                 <ScrollLink to='services' duration={2000} smooth={true} href='#services' className={`px-3 lg:px-2 xl:px-4 py-1.5 rounded-2xl cursor-pointer  ${scroll && 'hover:text-blue-600'}`}>{t('services')}</ScrollLink>

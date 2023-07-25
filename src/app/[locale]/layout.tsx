@@ -82,7 +82,8 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   return (
     <html lang={locale}>
       <meta name='color-scheme' content='light' />
-      <meta name='theme-color' content='#2563eb' />
+      <meta name="theme-color" content="#2563eb" />
+      <link rel="manifest" href="/manifest.json" />
       <meta name="google-site-verification" content="GPPohusFE-I-wSDhkrC948VQHdCtwLAGJruLmQVpRwQ" />
       <body>
         <NextIntlClientProvider locale={locale} messages={translation}>

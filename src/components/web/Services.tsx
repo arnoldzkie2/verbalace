@@ -16,7 +16,7 @@ const Services: React.FC<ServicesProps> = ({ }) => {
         <section id='services' className='py-20 flex items-center flex-col gap-10 lg:gap-16 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44'>
             <h1 className='text-gray-700 text-3xl md:text-4xl lg:text-5xl  font-light lg:font-extralight pb-8 mb-8 border-b 2xl:hidden'>{t('offer')}</h1>
             <div className='flex flex-col 2xl:flex-row 2xl:justify-around items-center xl:gap-20 w-full'>
-                <Image src={'/web/services/service.webp'} alt='Our Services' width={700} height={700} className='w-72 h-72 sm:w-[26rem] sm:h-[26rem] md:w-[30rem] md:h-[30rem] lg:w-[35rem] lg:h-[35rem] xl:w-[40rem] xl:h-[40rem] 2xl:w-[47rem] 2xl:h-[47rem]' />
+                <Image src={'/web/services/service.webp'} alt='Our Services' width={700} height={700} className='w-80 h-80 sm:w-[26rem] sm:h-[26rem] md:w-[30rem] md:h-[30rem] lg:w-[35rem] lg:h-[35rem] xl:w-[40rem] xl:h-[40rem] 2xl:w-[47rem] 2xl:h-[47rem]' />
                 <div className='flex gap-10 flex-col items-center justify-center 2xl:items-start 2xl:w-2/5'>
                     <h1 className='text-gray-700 text-3xl md:text-4xl lg:text-5xl hidden 2xl:block font-light lg:font-extralight pb-8 border-b'>{t('offer')}</h1>
 

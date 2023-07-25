@@ -21,7 +21,7 @@ const NewsFooter: React.FC<FooterProps> = ({ }) => {
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row py-10 w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                    <h1 className='text-blue-600 font-black text-xl md:text-2xl'>VERBAL-ACE</h1>
+                <Link href={'/'} className={`lg:w-64 font-bold text-2xl text-blue-600`}>verbalace</Link>
                     <p className='text-sm leading-6'>{footer('description')}</p>
                     <Link href={'/about'} className='font-medium text-blue-600 cursor-pointer' >{footer('team')}</Link>
                 </div>

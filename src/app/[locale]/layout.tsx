@@ -1,7 +1,7 @@
 import '../../lib/styles/globals.css'
-
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+
 interface Props {
   children: React.ReactNode
   params: {

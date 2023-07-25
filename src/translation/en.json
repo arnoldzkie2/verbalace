@@ -72,5 +72,9 @@
     "privacy": "Privacy",
     "join": "Join us on",
     "team": "Our Team"
+  },
+  "thankyou": {
+    "h1": "Thank You for Visiting Us!",
+    "h2": "Discover More with Us Explore our website for valuable content, helpful resources, and exciting offers. We're thrilled to have you here!"
   }
 }

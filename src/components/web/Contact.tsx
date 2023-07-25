@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
     const t = useTranslations('contact')
 
     return (
-        <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-10 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
+        <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-24 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
 
             <header className='flex flex-col items-center text-center gap-3 sm:gap-4'>
                 <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight' >{t('h1')}</h1>

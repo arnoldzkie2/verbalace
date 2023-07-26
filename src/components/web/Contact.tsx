@@ -3,16 +3,66 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ }) => {
 
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+    })
+
+    const handleForm = (e: any) => {
+
+        const { name, value } = e.target
+
+        setFormData(prevData => ({
+            ...prevData, [name]: value
+        }))
+    }
+
     const t = useTranslations('contact')
+
+    const sendMessage = async (e: any) => {
+
+        e.preventDefault()
+
+        const { name, phone, email, message } = formData
+
+        if (!name || name.length < 3) return alert('Name field should not be empty or less than 3 characters')
+        if (!phone || phone.length < 5) return alert('Phone field should not be empty or less than 5 characters')
+        if (!email || email.length < 3) return alert('Email field should not be empty or less than 3 characters')
+        if (!message || message.length < 3) return alert('Message field should not be empty or less than 3 characters')
+
+        try {
+
+            const { data } = await axios.post('/api/email', {
+                name, phone, email, message
+            })
+
+            if (data.status) {
+                alert('Thank you for leaving a message')
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    message: ''
+                })
+            }
+        } catch (error) {
+
+            console.log(error);
+
+        }
+    }
 
     return (
         <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-10 lg:py-20 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
@@ -45,14 +95,11 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                     </div>
                 </aside>
 
-                <form onSubmit={(e: any) => {
-                    e.preventDefault()
-                    alert('Thankyou for leaving a message.')
-                }} className='flex flex-col p-7 border bg-white shadow-2xl rounded-3xl gap-3 w-full sm:w-96'>
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' placeholder={t('form.name')} />
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' placeholder={t('form.phone')} />
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' placeholder={t('form.email')} />
-                    <textarea className='px-3 py-2 h-44 md:h-56 resize-none border-b border-gray-300 text-gray-600 outline-none' placeholder={t('form.message')} />
+                <form onSubmit={sendMessage} className='flex flex-col p-7 border bg-white shadow-2xl rounded-3xl gap-3 w-full sm:w-96'>
+                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='name' onChange={handleForm} value={formData.name} placeholder={t('form.name')} />
+                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='phone' onChange={handleForm} value={formData.phone} placeholder={t('form.phone')} />
+                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='email' onChange={handleForm} value={formData.email} placeholder={t('form.email')} />
+                    <textarea className='px-3 py-2 h-44 md:h-56 resize-none border-b border-gray-300 text-gray-600 outline-none' name='message' onChange={handleForm} value={formData.message} placeholder={t('form.message')} />
                     <button className='bg-blue-600 text-white py-3 mt-3 text-lg rounded-3xl hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400'>{t('form.button')}</button>
                 </form>
             </div>

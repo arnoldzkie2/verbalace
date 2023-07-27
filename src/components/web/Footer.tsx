@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
 
             <nav className='flex md:justify-between flex-col gap-7 lg:gap-0 md:flex-row w-full'>
                 <div className='flex flex-col gap-4 md:w-1/3 lg:w-1/4'>
-                    <Image src={'/logo.png'} alt='Logo' width={128} height={10} className=' w-32' />
+                    <Image src={'/logo.png'} alt='Logo' width={112} height={10} className='w-28' />
                     <p className='text-sm leading-6'>{footer('description')}</p>
                     <ScrollLink to='about' duration={2000} smooth={true} href='#about' className='font-medium text-blue-600 cursor-pointer'>{footer('team')}</ScrollLink>
                 </div>

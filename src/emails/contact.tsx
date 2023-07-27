@@ -22,23 +22,22 @@ interface ContactProps {
     message: string
 }
 
-export const Contact = ({ name, email, phone, message }: ContactProps) => {
-    
+export const Contact = ({ name, email, phone, message ='Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem' }: ContactProps) => {
+
     return (
         <Html>
             <Head />
             <Preview>New Message from {name} comes from www.verbalace.com#contact</Preview>
             <Tailwind>
-                <Body className="bg-white my-auto mx-auto font-sans">
-                    <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-10 w-[1000px]">
-                        <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
+                <Body className="grid place-items-center bg-[url(https://www.verbalace.com/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover font-sans">
+                    <Container className="border bg-white border-solid border-[#eaeaea] text-gray-600 rounded-3xl shadow-2xl mt-[150px] mx-auto px-10 w-[1000px]">
+                        <Heading className="text-black text-[24px] font-normal text-center">
                             <Img src='https://www.verbalace.com/logo.png' className='w-40 h-auto mx-auto' />
                         </Heading>
                         <Text><strong>Name: </strong>{name}</Text>
                         <Text><strong>Email: </strong>{email}</Text>
                         <Text><strong>Phone: </strong>{phone}</Text>
-                        <Text>{message}</Text>
-                        <Text><strong className='text-gray-700'>VerbalAce Support Team</strong></Text>
+                        <Text><strong>Message: </strong> {message}</Text>
                         <Link href='https://www.verbalace.com' className='text-blue-600 underline'>verbalace.com</Link>
                         <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
                     </Container>

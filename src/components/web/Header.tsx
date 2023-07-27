@@ -5,8 +5,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import Translate from './Translate';
 import { Link as ScrollLink } from 'react-scroll'
 import Link from 'next-intl/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
 interface HeaderProps {
@@ -45,9 +43,9 @@ const Header: React.FC<HeaderProps> = ({ }) => {
 
     return (
         <header className={`z-10 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 h-16 md:h-20 fixed w-screen flex items-center top-0 left-0 justify-between ${scroll ? 'text-gray-700 bg-white shadow-lg' : 'text-white bg-transparent'}`}>
-            <Link href={'/'} className='flex items-center'>
+            <ScrollLink href={'/#home'} smooth={true} to='home' duration={2000} className='flex items-center'>
                 <Image src={'/logo.png'} alt='Logo' width={160} height={50} className='w-36 md:w-40 pb-1.5 md:pb-4' />
-            </Link>
+            </ScrollLink>
             <div className='absolute right-6 z-10 cursor-pointer lg:hidden sm:right-10 md:right-16' onClick={() => setIsOpen(prevState => !prevState)}>
                 {isOpen ?
                     <div className='relative w-[20px] h-[16px]'>

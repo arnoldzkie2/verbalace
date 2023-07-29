@@ -9,7 +9,6 @@ import {
     Img,
     Link,
     Preview,
-    Section,
     Tailwind,
     Text,
 } from '@react-email/components';
@@ -27,9 +26,9 @@ export const Contact = ({ name, email, phone, message ='Lorem Lorem Lorem Lorem 
     return (
         <Html>
             <Head />
-            <Preview>New Message from {name} comes from www.verbalace.com#contact</Preview>
+            <Preview>New Message from www.verbalace.com#contact</Preview>
             <Tailwind>
-                <Body className="grid place-items-center bg-[url(https://www.verbalace.com/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover font-sans">
+                <Body className="grid place-items-center bg-center bg-no-repeat bg-cover font-sans bg-slate-100">
                     <Container className="border bg-white border-solid border-[#eaeaea] text-gray-600 rounded-3xl shadow-2xl mt-[150px] mx-auto px-10 w-[1000px]">
                         <Heading className="text-black text-[24px] font-normal text-center">
                             <Img src='https://www.verbalace.com/logo.png' className='w-40 h-auto mx-auto' />

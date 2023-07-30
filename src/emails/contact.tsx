@@ -37,7 +37,7 @@ export const Contact = ({ name, email, phone, message ='Lorem Lorem Lorem Lorem 
                         <Text><strong>Email: </strong>{email}</Text>
                         <Text><strong>Phone: </strong>{phone}</Text>
                         <Text><strong>Message: </strong> {message}</Text>
-                        <Link href='https://www.verbalace.com' className='text-blue-600 underline'>verbalace.com</Link>
+                        <Link href='https://www.verbalace.com#contact' className='text-blue-600 underline'>verbalace.com#contact</Link>
                         <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
                     </Container>
                 </Body>

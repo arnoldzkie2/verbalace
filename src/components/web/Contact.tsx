@@ -16,7 +16,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
     const [isSpamming, setIsSpamming] = useState(false)
 
-    const SPAM_TIMEOUT = 5 * 60 * 1000; // 5 minutes in milliseconds
+    const SPAM_TIMEOUT = 10 * 60 * 1000; // 5 minutes in milliseconds
 
     const locale = useLocale()
 
@@ -103,6 +103,29 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
                 setIsSpamming(true)
 
+            } else {
+
+                if (locale === 'en') {
+                    alert('Something went wrong, please try again.');
+                } else if (locale === 'ja') {
+                    alert('何かがうまくいきませんでした。もう一度お試しください。');
+                } else if (locale === 'kr') {
+                    alert('문제가 발생했습니다. 다시 시도해주세요.');
+                } else if (locale === 'vi') {
+                    alert('Có lỗi xảy ra, vui lòng thử lại.');
+                } else if (locale === 'zh') {
+                    alert('出了些问题，请重试。');
+                } else {
+                    alert('Something went wrong, please try again.');
+                }
+
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    message: ''
+                })
+
             }
         } catch (error) {
 
@@ -167,11 +190,11 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                     alert(`You already submitted a message. Please try again in ${formattedTime}`);
                 }
 
+            } else {
+
+                await sendMessage(e)
+
             }
-
-        } else {
-
-            await sendMessage(e)
 
         }
     };
@@ -182,7 +205,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
         <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-10 lg:py-20 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
 
             <header className='flex flex-col items-center text-center gap-3 sm:gap-4'>
-                <h1 className='text-white text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-light lg:font-extralight' >{t('h1')}</h1>
+                <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight' >{t('h1')}</h1>
                 <p className='text-white text-sm sm:text-base'>{t('p')}</p>
             </header>
 

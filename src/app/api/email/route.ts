@@ -10,16 +10,16 @@ export const POST = async (req: Request) => {
     const { name, email, phone, message } = await req.json()
 
     const replyToClient = await resend.emails.send({
-        from: 'support@verbalace.com',
+        from: 'VerbalAce <support@verbalace.com>',
         to: email,
         subject: 'Welcome to VerbalAce - Mastering English Made Fun and Easy!',
         react: ThankyouEmail({ name })
     })
 
     const sendToTeam = await resend.emails.send({
-        from: 'email@verbalace.com',
+        from: `${name} <website@verbalace.com>`,
         to: 'support@verbalace.com',
-        subject: 'VerbalAce Contact Page',
+        subject: 'VerbalAce Contact Message',
         react: Contact({ name, email, phone, message })
     })
 

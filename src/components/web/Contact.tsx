@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { useLocale, useTranslations } from 'next-intl';
@@ -61,7 +61,6 @@ const Contact: React.FC<ContactProps> = ({ }) => {
         }))
     }
 
-    const t = useTranslations('contact')
 
     const sendMessage = async (e: any) => {
 
@@ -101,15 +100,8 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                     email: '',
                     message: ''
                 })
+
                 setIsSpamming(true)
-
-                const timer = setTimeout(() => {
-                    setIsSpamming(false);
-                }, SPAM_TIMEOUT);
-
-                return () => {
-                    clearTimeout(timer);
-                };
 
             }
         } catch (error) {
@@ -120,6 +112,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
     }
 
     const formatTime = (time: number, locale: string) => {
+
         const minutes = Math.floor(time / 60000);
         const seconds = ((time % 60000) / 1000).toFixed(0);
 
@@ -140,40 +133,56 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
 
     const spamm = async (e: any) => {
+
         e.preventDefault();
-      
+
+        const { name, phone, email, message } = formData
+
+        if (!name || name.length < 3) return alert('Name field should not be empty or less than 3 characters')
+        if (!phone || phone.length < 5) return alert('Phone field should not be empty or less than 5 characters')
+        if (!email || email.length < 3) return alert('Email field should not be empty or less than 3 characters')
+        if (!message || message.length < 3) return alert('Message field should not be empty or less than 3 characters')
+
         const contactTimeout = localStorage.getItem('contactTimeout');
-      
+
         if (contactTimeout) {
-          const elapsedTime = Date.now() - parseInt(contactTimeout);
-          const remainingTime = SPAM_TIMEOUT - elapsedTime;
-      
-          if (remainingTime > 0) {
-            const formattedTime = formatTime(remainingTime, locale);
-            
-            if (locale === 'en') {
-              alert(`You already submitted a message. Please try again in ${formattedTime}`);
-            } else if (locale === 'ja') {
-              alert(`すでにメッセージを送信しています。${formattedTime}後にもう一度お試しください。`);
-            } else if (locale === 'kr') {
-              alert(`이미 메시지를 제출하셨습니다. ${formattedTime} 후에 다시 시도해주세요.`);
-            } else if (locale === 'vi') {
-              alert(`Bạn đã gửi một tin nhắn rồi. Vui lòng thử lại sau ${formattedTime}.`);
-            } else if (locale === 'zh') {
-              alert(`您已经提交了一条消息。请在${formattedTime}后再试。`);
-            } else {
-              alert(`You already submitted a message. Please try again in ${formattedTime}`);
+            const elapsedTime = Date.now() - parseInt(contactTimeout);
+            const remainingTime = SPAM_TIMEOUT - elapsedTime;
+
+            if (remainingTime > 0) {
+
+                const formattedTime = formatTime(remainingTime, locale);
+
+                if (locale === 'en') {
+                    alert(`You already submitted a message. Please try again in ${formattedTime}`);
+                } else if (locale === 'ja') {
+                    alert(`すでにメッセージを送信しています。${formattedTime}後にもう一度お試しください。`);
+                } else if (locale === 'kr') {
+                    alert(`이미 메시지를 제출하셨습니다. ${formattedTime} 후에 다시 시도해주세요.`);
+                } else if (locale === 'vi') {
+                    alert(`Bạn đã gửi một tin nhắn rồi. Vui lòng thử lại sau ${formattedTime}.`);
+                } else if (locale === 'zh') {
+                    alert(`您已经提交了一条消息。请在${formattedTime}后再试。`);
+                } else {
+                    alert(`You already submitted a message. Please try again in ${formattedTime}`);
+                }
+
             }
-          }
+
+        } else {
+
+            await sendMessage(e)
+
         }
-      };
-      
+    };
+
+    const t = useTranslations('contact')
 
     return (
         <section id='contact' className='bg-[url(/web/contact/contact.svg)] bg-center bg-no-repeat bg-cover w-screen flex items-center justify-center py-10 lg:py-20 flex-col px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 gap-10 md:gap-16 lg:gap-24'>
 
             <header className='flex flex-col items-center text-center gap-3 sm:gap-4'>
-                <h1 className='text-white text-3xl md:text-4xl lg:text-5xl font-light lg:font-extralight' >{t('h1')}</h1>
+                <h1 className='text-white text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-light lg:font-extralight' >{t('h1')}</h1>
                 <p className='text-white text-sm sm:text-base'>{t('p')}</p>
             </header>
 

@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const POST = async (req: Request) => {
 
-    const { name, email, phone, message } = await req.json()
+    const { name, email, phone, message, locale } = await req.json()
 
     const replyToClient = await resend.emails.send({
         from: 'VerbalAce <support@verbalace.com>',

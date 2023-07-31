@@ -14,6 +14,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ }) => {
 
+
     const [isSpamming, setIsSpamming] = useState(false)
 
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -44,17 +45,16 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
         const { name, phone, email, message } = formData
 
-        if (!name || name.length < 3) return alert('Name field should not be empty or less than 3 characters')
-        if (!phone || phone.length < 5) return alert('Phone field should not be empty or less than 5 characters')
-        if (!email || email.length < 3) return alert('Email field should not be empty or less than 3 characters')
-        if (!message || message.length < 3) return alert('Message field should not be empty or less than 3 characters')
+        if (!name) return alert('Name field should not be empty')
+        if (!email || email.length < 5) return alert('Email field should not be empty or less than 5 characters')
+        if (!message) return alert('Message field should not be empty')
 
         try {
 
             setIsSubmitting(true)
 
             const { data } = await axios.post('/api/email', {
-                name, phone, email, message
+                name, phone, email, message, locale
             })
 
             if (data.status) {
@@ -110,7 +110,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                 })
 
             }
-            
+
         } catch (error) {
 
             setIsSubmitting(false)
@@ -161,13 +161,13 @@ const Contact: React.FC<ContactProps> = ({ }) => {
     };
 
     const spamm = async (e: any) => {
-        e.preventDefault();
-        const { name, phone, email, message } = formData
 
-        if (!name || name.length < 3) return alert('Name field should not be empty or less than 3 characters')
-        if (!phone || phone.length < 5) return alert('Phone field should not be empty or less than 5 characters')
-        if (!email || email.length < 3) return alert('Email field should not be empty or less than 3 characters')
-        if (!message || message.length < 3) return alert('Message field should not be empty or less than 3 characters')
+        e.preventDefault();
+        const { name, email, message } = formData
+
+        if (!name) return alert('Name field should not be empty')
+        if (!email || email.length < 5) return alert('Email field should not be empty or less than 5 characters')
+        if (!message) return alert('Message field should not be empty')
 
         const contactTimeout = localStorage.getItem('contactTimeout');
 
@@ -208,13 +208,13 @@ const Contact: React.FC<ContactProps> = ({ }) => {
             case 'en':
                 return 'Processing...';
             case 'ja':
-                return '処理中...'; 
+                return '処理中...';
             case 'kr':
                 return '처리 중...';
             case 'vi':
                 return 'Đang xử lý...';
             case 'zh':
-                return '处理中...'; 
+                return '处理中...';
             default:
                 return 'Processing...';
         }
@@ -278,10 +278,10 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                 </aside>
 
                 <form onSubmit={isSpamming ? spamm : sendMessage} className='flex flex-col p-7 border bg-white shadow-2xl rounded-3xl gap-3 w-full sm:w-96'>
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='name' onChange={handleForm} value={formData.name} placeholder={t('form.name')} />
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='phone' onChange={handleForm} value={formData.phone} placeholder={t('form.phone')} />
-                    <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='email' onChange={handleForm} value={formData.email} placeholder={t('form.email')} />
-                    <textarea className='px-3 py-2 h-44 md:h-56 resize-none border-b border-gray-300 text-gray-600 outline-none' name='message' onChange={handleForm} value={formData.message} placeholder={t('form.message')} />
+                    <input required type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='name' onChange={handleForm} value={formData.name} placeholder={t('form.name')} />
+                    <input type="number" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='phone' onChange={handleForm} value={formData.phone} placeholder={t('form.phone')} />
+                    <input type="email" required className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='email' onChange={handleForm} value={formData.email} placeholder={t('form.email')} />
+                    <textarea required className='px-3 py-2 h-44 md:h-56 resize-none border-b border-gray-300 text-gray-600 outline-none' name='message' onChange={handleForm} value={formData.message} placeholder={t('form.message')} />
                     <button disabled={isSubmitting && true} className={`${isSubmitting ? 'bg-blue-400' : 'bg-blue-600 text-white hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400'} text-white h-12 mt-3 text-lg rounded-3xl`}>
                         {!isSubmitting ? t('form.button') :
                             <div className='flex items-center gap-3 w-full justify-center'>

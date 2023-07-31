@@ -90,7 +90,7 @@ const About: React.FC = ({ }) => {
         <section className='py-10 lg:py-20 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-36 2xl:px-44 flex items-center gap-10 md:gap-16 text-gray-700 flex-col' id='about'>
             <h1 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light lg:font-extralight 2xl:hidden'>{t('h1')}</h1>
             <div className='flex flex-col gap-5 sm:gap-10 md:gap-16 xl:gap-20 items-center xl:items-end 2xl:flex-row lg:justify-between'>
-                <video controls preload='' className='w-auto h-auto 2xl:w-2/3 2xl:h-2/3 rounded-md' poster='/web/about/thumbnail.webp'>
+                <video controls className='w-auto h-auto 2xl:w-2/3 2xl:h-2/3 rounded-md' poster='/web/about/thumbnail.webp'>
                     <source src='/web/about/about.mp4' type='video/mp4' />
                     Your browser does not support the video.
                 </video>

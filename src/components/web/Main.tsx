@@ -21,7 +21,7 @@ const Main: React.FC<MainProps> = ({ }) => {
                     className='bg-white cursor-pointer mt-2 md:mt-5 xl:px-7 text-blue-600 hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400 border border-white hover:text-white  py-2 px-5 text-sm rounded-3xl shadow-sm'>
                     {main('button')}</Link>
             </div>
-            <Image src={'/web/hero.webp'} alt='Hero' width={400} height={400} priority className='bg-white w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 xl:w-96 xl:h-96 2xl:w-[25rem] 2xl:h-[25rem] rounded-full shadow-xl' />
+            <Image src={'/web/hero.webp'} alt='Hero' width={400} height={400} className='bg-white w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 xl:w-96 xl:h-96 2xl:w-[25rem] 2xl:h-[25rem] rounded-full shadow-xl' />
         </main>
     );
 };

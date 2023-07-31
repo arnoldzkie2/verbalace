@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneVolume, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { useLocale, useTranslations } from 'next-intl';
@@ -15,6 +15,8 @@ interface ContactProps {
 const Contact: React.FC<ContactProps> = ({ }) => {
 
     const [isSpamming, setIsSpamming] = useState(false)
+
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const SPAM_TIMEOUT = 10 * 60 * 1000; // 5 minutes in milliseconds
 
@@ -75,11 +77,16 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
         try {
 
+            setIsSubmitting(true)
+
             const { data } = await axios.post('/api/email', {
                 name, phone, email, message
             })
 
             if (data.status) {
+
+                setIsSubmitting(false)
+
                 localStorage.setItem('contactTimeout', Date.now().toString());
 
                 if (locale === 'en') {
@@ -105,6 +112,8 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
             } else {
 
+                setIsSubmitting(false)
+
                 if (locale === 'en') {
                     alert('Something went wrong, please try again.');
                 } else if (locale === 'ja') {
@@ -129,6 +138,28 @@ const Contact: React.FC<ContactProps> = ({ }) => {
             }
         } catch (error) {
 
+            setIsSubmitting(false)
+
+            if (locale === 'en') {
+                alert('Something went wrong, please try again.');
+            } else if (locale === 'ja') {
+                alert('何かがうまくいきませんでした。もう一度お試しください。');
+            } else if (locale === 'kr') {
+                alert('문제가 발생했습니다. 다시 시도해주세요.');
+            } else if (locale === 'vi') {
+                alert('Có lỗi xảy ra, vui lòng thử lại.');
+            } else if (locale === 'zh') {
+                alert('出了些问题，请重试。');
+            } else {
+                alert('Something went wrong, please try again.');
+            }
+
+            setFormData({
+                name: '',
+                phone: '',
+                email: '',
+                message: ''
+            })
             console.log(error);
 
         }
@@ -196,8 +227,31 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
             }
 
+        } else {
+
+            await sendMessage(e)
+
         }
     };
+
+    const processingText = () => {
+
+        switch (locale) {
+            case 'en':
+                return 'Processing...';
+            case 'ja':
+                return '処理中...'; 
+            case 'kr':
+                return '처리 중...';
+            case 'vi':
+                return 'Đang xử lý...';
+            case 'zh':
+                return '处理中...'; 
+            default:
+                return 'Processing...';
+        }
+
+    }
 
     const t = useTranslations('contact')
 
@@ -213,7 +267,6 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
                 <aside className='flex flex-col gap-3 md:gap-5 items-center'>
                     <Image src={'/web/contact/contact-img.webp'} alt='Contact us' className='w-72 h-auto sm:w-80' width={320} height={320} />
-                    {/* <img src="/web/contact/contact-img.png" alt="Contact Us" className='lg:h-64 sm:h-52' /> */}
                     <h1 className='text-white text-2xl md:text-3xl lg:text-gray-800 md:border-gray-300 2xl:text-white lg:mt-4 font-light md:font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
                     <div className='flex w-full flex-col gap-5'>
                         <div className='flex gap-4'>
@@ -237,7 +290,13 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                     <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='phone' onChange={handleForm} value={formData.phone} placeholder={t('form.phone')} />
                     <input type="text" className='px-3 py-2 border-b border-gray-300 text-gray-600 outline-none' name='email' onChange={handleForm} value={formData.email} placeholder={t('form.email')} />
                     <textarea className='px-3 py-2 h-44 md:h-56 resize-none border-b border-gray-300 text-gray-600 outline-none' name='message' onChange={handleForm} value={formData.message} placeholder={t('form.message')} />
-                    <button className='bg-blue-600 text-white py-3 mt-3 text-lg rounded-3xl hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400'>{t('form.button')}</button>
+                    <button disabled={isSubmitting && true} className={`${isSubmitting ? 'bg-blue-400' : 'bg-blue-600 text-white hover:bg-gradient-to-b from-blue-700 via-blue-500 to-cyan-400'} text-white h-12 mt-3 text-lg rounded-3xl`}>
+                        {!isSubmitting ? t('form.button') :
+                            <div className='flex items-center gap-3 w-full justify-center'>
+                                <FontAwesomeIcon icon={faSpinner} className='animate-spin' />
+                                {processingText()}
+                            </div>}
+                    </button>
                 </form>
             </div>
         </section>

@@ -18,7 +18,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false)
 
-    const SPAM_TIMEOUT = 10 * 60 * 1000; // 5 minutes in milliseconds
+    const SPAM_TIMEOUT = 10 * 60 * 1000; // 10 minutes in milliseconds
 
     const locale = useLocale()
 
@@ -136,6 +136,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                 })
 
             }
+            
         } catch (error) {
 
             setIsSubmitting(false)
@@ -187,9 +188,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
 
     const spamm = async (e: any) => {
-
         e.preventDefault();
-
         const { name, phone, email, message } = formData
 
         if (!name || name.length < 3) return alert('Name field should not be empty or less than 3 characters')
@@ -222,17 +221,14 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                 }
 
             } else {
-
                 await sendMessage(e)
-
             }
 
         } else {
-
             await sendMessage(e)
-
         }
     };
+
 
     const processingText = () => {
 

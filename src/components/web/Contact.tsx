@@ -18,41 +18,16 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
     const [isSubmitting, setIsSubmitting] = useState(false)
 
-    const SPAM_TIMEOUT = 10 * 60 * 1000; // 10 minutes in milliseconds
-
-    const locale = useLocale()
-
-    useEffect(() => {
-
-        const contactTimeout = localStorage.getItem('contactTimeout');
-
-        if (contactTimeout) {
-
-            const elapsedTime = Date.now() - parseInt(contactTimeout);
-
-            if (elapsedTime < SPAM_TIMEOUT) {
-
-                setIsSpamming(true);
-
-                // Start a timer to reset isSpamming after 10 minutes
-                const timer = setTimeout(() => {
-                    setIsSpamming(false);
-                }, SPAM_TIMEOUT - elapsedTime);
-
-                return () => {
-                    clearTimeout(timer);
-                };
-            }
-        }
-
-    }, []);
-
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
         email: '',
         message: ''
     })
+
+    const SPAM_TIMEOUT = 10 * 60 * 1000; // 10 minutes in milliseconds
+
+    const locale = useLocale()
 
     const handleForm = (e: any) => {
 
@@ -62,7 +37,6 @@ const Contact: React.FC<ContactProps> = ({ }) => {
             ...prevData, [name]: value
         }))
     }
-
 
     const sendMessage = async (e: any) => {
 
@@ -186,7 +160,6 @@ const Contact: React.FC<ContactProps> = ({ }) => {
         return `${minutes} minutes and ${seconds} seconds`;
     };
 
-
     const spamm = async (e: any) => {
         e.preventDefault();
         const { name, phone, email, message } = formData
@@ -229,7 +202,6 @@ const Contact: React.FC<ContactProps> = ({ }) => {
         }
     };
 
-
     const processingText = () => {
 
         switch (locale) {
@@ -248,6 +220,30 @@ const Contact: React.FC<ContactProps> = ({ }) => {
         }
 
     }
+
+    useEffect(() => {
+
+        const contactTimeout = localStorage.getItem('contactTimeout');
+
+        if (contactTimeout) {
+
+            const elapsedTime = Date.now() - parseInt(contactTimeout);
+
+            if (elapsedTime < SPAM_TIMEOUT) {
+
+                setIsSpamming(true);
+
+                const timer = setTimeout(() => {
+                    setIsSpamming(false);
+                }, SPAM_TIMEOUT - elapsedTime);
+
+                return () => {
+                    clearTimeout(timer);
+                };
+            }
+        }
+
+    }, []);
 
     const t = useTranslations('contact')
 

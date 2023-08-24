@@ -30,7 +30,7 @@ export const generateStaticParams = async () => {
 
     try {
 
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news/${process.env.NEXT_PUBLIC_DEPARTMENT}/keyword`)
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news/keyword`)
 
         return data.data.map((item: any) => ({
             keyword: item

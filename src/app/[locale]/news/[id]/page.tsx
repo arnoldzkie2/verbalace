@@ -19,17 +19,19 @@ interface PageProps {
 
 export const revalidate = 43200
 
-export const generateStaticParams = async() => {
+export const generateStaticParams = async () => {
 
     try {
 
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news/${process.env.NEXT_PUBLIC_DEPARTMENT}`)
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news?departmentID=${process.env.NEXT_PUBLIC_DEPARTMENT}`)
 
-        return data.data
+        return data.data.map((item: any) => ({
+            id: item.id
+        }))
 
     } catch (error) {
 
-        console.log(error);
+        console.log(error)
 
     }
 
@@ -50,7 +52,7 @@ const generateDescription = (news: NewsType, locale: string) => {
     }
 }
 
-export const generateMetadata = async({ params }: PageProps) => {
+export const generateMetadata = async ({ params }: PageProps) => {
 
     const news: NewsType = await getSingleNews(params.id);
 
@@ -87,7 +89,7 @@ const Page: React.FC<PageProps> = async ({ params }) => {
         <div className='overflow-x-hidden bg-slate-200 flex flex-col items-center'>
             <NewsHeader />
             <SingleNews news={singleNews} />
-            <LatestNews news={allNews}/>
+            <LatestNews news={allNews} />
             <ReadMore news={allNews} />
             <NewsFooter />
         </div >

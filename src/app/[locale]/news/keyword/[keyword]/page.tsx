@@ -4,7 +4,7 @@ import NewsHeader from '@/components/web/news/NewsHeader';
 import NewsMain from '@/components/web/news/NewsMain';
 import ReadMore from '@/components/web/news/ReadMore';
 import RelatedNews from '@/components/web/news/RelatedNews';
-import { getAllNews, getRelatedNews } from '@/lib/news/news';
+import { getAllNews, getRelatedNews } from '@/lib/api/news';
 import axios from 'axios';
 import React from 'react';
 
@@ -37,7 +37,7 @@ export const generateStaticParams = async () => {
         })
 
         if (data.ok) {
-            
+
             return data.data.map((item: any) => ({
                 keyword: item
             }))

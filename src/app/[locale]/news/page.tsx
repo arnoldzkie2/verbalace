@@ -3,7 +3,7 @@ import NewsFooter from '@/components/web/news/NewsFooter';
 import NewsHeader from '@/components/web/news/NewsHeader';
 import NewsMain from '@/components/web/news/NewsMain';
 import ReadMore from '@/components/web/news/ReadMore';
-import { getAllNews } from '@/lib/news/news';
+import { getAllNews } from '@/lib/api/news';
 import React from 'react';
 
 interface PageProps {

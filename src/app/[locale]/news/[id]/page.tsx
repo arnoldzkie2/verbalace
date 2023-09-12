@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import ReadMore from '@/components/web/news/ReadMore';
 import SingleNews from '@/components/web/news/SingleNews';
 import LatestNews from '@/components/web/news/LatestNews';
-import { getAllNews, getSingleNews } from '@/lib/news/news';
+import { getAllNews, getSingleNews } from '@/lib/api/news';
 
 interface PageProps {
     params: {

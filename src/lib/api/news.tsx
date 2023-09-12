@@ -6,15 +6,24 @@ const DEPARTMENT = process.env.NEXT_PUBLIC_DEPARTMENT
 
 const getAllNews = async () => {
 
-    const { data } = await axios.get(`${URL}/api/news`, {
-        params: {
-            departmentID: DEPARTMENT
-        }
-    })
+    try {
+        const { data } = await axios.get(`${URL}/api/news`, {
+            params: {
+                departmentID: DEPARTMENT
+            }
+        })
 
-    if (data.ok) return data.data
+        if (data.ok) return data.data
 
-    return []
+        return []
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+
 
 }
 
@@ -24,7 +33,8 @@ const getSingleNews = async (id: string) => {
 
         const { data } = await axios.get(`${URL}/api/news`, {
             params: {
-                newsID: id
+                newsID: id,
+                departmentID: DEPARTMENT
             }
         })
 
@@ -42,7 +52,7 @@ const getRelatedNews = async (keyword: string) => {
 
     try {
 
-        const { data } = await axios.get(`${URL}/api/news`, {
+        const { data } = await axios.get(`${URL}/api/news/keyword`, {
             params: {
                 departmentID: DEPARTMENT,
                 keyword: keyword
@@ -51,9 +61,15 @@ const getRelatedNews = async (keyword: string) => {
 
         if (data.ok) return data.data
 
+        return []
+
     } catch (error) {
+
+        console.log(error);
+
 
     }
 
 }
+
 export { getAllNews, getSingleNews, getRelatedNews }

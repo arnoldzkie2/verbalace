@@ -23,8 +23,6 @@ const getAllNews = async () => {
 
     }
 
-
-
 }
 
 const getSingleNews = async (id: string) => {
@@ -33,8 +31,7 @@ const getSingleNews = async (id: string) => {
 
         const { data } = await axios.get(`${URL}/api/news`, {
             params: {
-                newsID: id,
-                departmentID: DEPARTMENT
+                newsID: id
             }
         })
 

@@ -58,12 +58,9 @@ const getRelatedNews = async (keyword: string) => {
 
         if (data.ok) return data.data
 
-        return []
-
     } catch (error) {
 
         console.log(error);
-
 
     }
 

@@ -94,7 +94,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
 const Page: React.FC<PageProps> = async ({ params }) => {
 
-    const relatedNews: NewsType[] = await getRelatedNews(params.keyword)
+    const relatedNews: NewsType[] = await getRelatedNews(decodeURIComponent(params.keyword))
 
     const allNews: NewsType[] = await getAllNews()
 

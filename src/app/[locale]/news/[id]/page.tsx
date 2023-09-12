@@ -23,7 +23,11 @@ export const generateStaticParams = async () => {
 
     try {
 
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news?departmentID=${process.env.NEXT_PUBLIC_DEPARTMENT}`)
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news`, {
+            params: {
+                departmentID: process.env.NEXT_PUBLIC_DEPARTMENT
+            }
+        })
 
         return data.data.map((item: any) => ({
             id: item.id

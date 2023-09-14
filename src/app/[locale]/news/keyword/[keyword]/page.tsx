@@ -99,7 +99,7 @@ const Page: React.FC<PageProps> = async ({ params }) => {
     const allNews: NewsType[] = await getAllNews()
 
     return (
-        <div className='overflow-x-hidden'>
+        <div className='overflow-x-hidden bg-slate-100'>
 
             <NewsHeader />
 

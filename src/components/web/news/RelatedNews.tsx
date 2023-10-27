@@ -14,7 +14,8 @@ interface NewsType {
     title: string
     content: string
     keywords: string[]
-    date: string
+    created_at: string
+    updated_at: string
 }
 
 const formatTimeAgo = (date: any, locale: string) => {
@@ -99,8 +100,8 @@ const RelatedNews: React.FC<AllNewsProps> = ({ news }) => {
     const [maxVisibleItems, setMaxVisibleItems] = useState(6);
 
     const sortedNews = [...news].sort((a, b) => {
-        const dateA = new Date(a.date) as any as number;
-        const dateB = new Date(b.date) as any as number;
+        const dateA = new Date(a.created_at) as any as number;
+        const dateB = new Date(b.created_at) as any as number;
         return dateB - dateA;
     });
 
@@ -115,7 +116,7 @@ const RelatedNews: React.FC<AllNewsProps> = ({ news }) => {
                 {displayedNews &&
                     displayedNews.length > 0 &&
                     displayedNews.map((newsItem) => {
-                        const timeAgo = formatTimeAgo(new Date(newsItem.date), locale);
+                        const timeAgo = formatTimeAgo(new Date(newsItem.created_at), locale);
 
                         return (
                             <Link

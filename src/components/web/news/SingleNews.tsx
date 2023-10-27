@@ -10,7 +10,8 @@ interface SingleNewsProps {
         title: string
         keywords: string[]
         content: string
-        date: string
+        created_at: string
+        updated_at: string
     }
 }
 
@@ -24,7 +25,7 @@ const SingleNews: React.FC<SingleNewsProps> = ({ news }) => {
                 <h1 className='text-gray-900 text-2xl md:text-3xl xl:text-4xl font-bold text-left'>{news.title && news.title}</h1>
                 <div className='flex flex-col gap-3'>
                     <small className='font-bold md:text-base lg:text-lg text-blue-600'>{news.author && news.author}</small>
-                    <div className='text-gray-700 font-medium'>{t('published')} {new Date(news.date).toLocaleString()}</div>
+                    <div className='text-gray-700 font-medium'>{t('published')} {new Date(news.created_at).toLocaleString()}</div>
                 </div>
                 <div className='font-medium'>{t('key')}</div>
                 <div className='relative py-6 border-y-2 border-blue-600'>

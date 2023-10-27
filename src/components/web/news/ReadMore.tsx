@@ -10,7 +10,8 @@ interface ReadMoreProps {
         title: string
         keywords: string[]
         content: string
-        date: string
+        updated_at: string
+        created_at: string
     }[]
 }
 
@@ -107,7 +108,7 @@ const ReadMore: React.FC<ReadMoreProps> = ({ news }) => {
                     displayedNews.length > 0 &&
                     displayedNews.map((newsItem) => {
 
-                        const timeAgo = formatTimeAgo(new Date(newsItem.date), locale);
+                        const timeAgo = formatTimeAgo(new Date(newsItem.created_at), locale);
 
                         return (
                             <Link

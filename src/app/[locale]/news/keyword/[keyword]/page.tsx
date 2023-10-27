@@ -21,7 +21,8 @@ interface NewsType {
     title: string
     content: string
     keywords: string[]
-    date: string
+    updated_at: string
+    created_at: string
 }
 
 export const revalidate = 43200

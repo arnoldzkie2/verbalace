@@ -44,15 +44,15 @@ export const generateStaticParams = async () => {
 const generateDescription = (news: NewsType, locale: string) => {
     switch (locale) {
         case 'zh':
-            return `新闻标题: ${news.title} | 作者: ${news.author} | 日期: ${news.date}（中文翻译）`;
+            return `新闻标题: ${news.title} | 作者: ${news.author} | 日期: ${news.created_at}（中文翻译）`;
         case 'ja':
-            return `ニュースタイトル: ${news.title} | 作者: ${news.author} | 日付: ${news.date}（日本語訳）`;
+            return `ニュースタイトル: ${news.title} | 作者: ${news.author} | 日付: ${news.created_at}（日本語訳）`;
         case 'kr':
-            return `뉴스 제목: ${news.title} | 작성자: ${news.author} | 날짜: ${news.date}（한국어 번역）`;
+            return `뉴스 제목: ${news.title} | 작성자: ${news.author} | 날짜: ${news.created_at}（한국어 번역）`;
         case 'vi':
-            return `Tiêu đề tin: ${news.title} | Tác giả: ${news.author} | Ngày: ${news.date}（Tiếng Việt dịch）`;
+            return `Tiêu đề tin: ${news.title} | Tác giả: ${news.author} | Ngày: ${news.created_at}（Tiếng Việt dịch）`;
         default:
-            return `News Title: ${news.title} | Author: ${news.author} | Date: ${news.date}`;
+            return `News Title: ${news.title} | Author: ${news.author} | Date: ${news.created_at}`;
     }
 }
 
@@ -78,7 +78,8 @@ interface NewsType {
     title: string
     keywords: string[]
     content: string
-    date: string
+    created_at: string
+    updated_at: string
 }
 
 const Page: React.FC<PageProps> = async ({ params }) => {

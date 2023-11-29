@@ -14,16 +14,10 @@ const getAllNews = async () => {
         })
 
         if (data.ok) return data.data
-
-        console.log(data.data);
-        
-
         return []
 
     } catch (error) {
-
         console.log(error);
-
     }
 
 }
@@ -41,9 +35,7 @@ const getSingleNews = async (id: string) => {
         if (data.ok) return data.data
 
     } catch (error) {
-
         console.log(error);
-
     }
 
 }
@@ -62,9 +54,7 @@ const getRelatedNews = async (keyword: string) => {
         if (data.ok) return data.data
 
     } catch (error) {
-
         console.log(error);
-
     }
 
 }

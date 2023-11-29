@@ -29,14 +29,11 @@ export const generateStaticParams = async () => {
             }
         })
 
-        return data.data.map((item: any) => ({
-            id: item.id
+        return data.data.map((news: NewsType) => ({
+            id: news.id
         }))
 
     } catch (error) {
-
-        console.log(error)
-
     }
 
 }
@@ -59,11 +56,8 @@ const generateDescription = (news: NewsType, locale: string) => {
 export const generateMetadata = async ({ params }: PageProps) => {
 
     const news: NewsType = await getSingleNews(params.id);
-
     const description = generateDescription(news, params.locale);
-
     const keywords = news.keywords.join(', ')
-
     return {
         title: news.title,
         description,
@@ -77,7 +71,16 @@ interface NewsType {
     author: string
     title: string
     keywords: string[]
+    created_at: string
+    updated_at: string
+}
+
+interface SingelNewsType {
+    id: string
+    author: string
+    title: string
     content: string
+    keywords: string[]
     created_at: string
     updated_at: string
 }
@@ -85,8 +88,7 @@ interface NewsType {
 const Page: React.FC<PageProps> = async ({ params }) => {
 
     const allNews: NewsType[] = await getAllNews()
-
-    const singleNews: NewsType = await getSingleNews(params.id)
+    const singleNews: SingelNewsType = await getSingleNews(params.id)
 
     if (!singleNews) return notFound()
 

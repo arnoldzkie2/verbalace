@@ -2,7 +2,7 @@
 'use client'
 import { useTranslations } from 'next-intl';
 
-const About: React.FC = ({ }) => {
+const About: React.FC = () => {
 
     const t = useTranslations('about')
 

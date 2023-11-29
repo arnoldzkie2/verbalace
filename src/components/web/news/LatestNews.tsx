@@ -11,7 +11,6 @@ interface NewsType {
     id: string;
     author: string;
     title: string;
-    content: string;
     keywords: string[];
     created_at: string;
     updated_at: string;
@@ -105,8 +104,6 @@ const LatestNews: React.FC<AllNewsProps> = ({ news }) => {
         const dateB = new Date(b.created_at) as any as number;
         return dateB - dateA;
     });
-
-    console.log(news);
 
     const displayedNews = sortedNews.slice(0, maxVisibleItems);
 

@@ -47,9 +47,7 @@ export const generateStaticParams = async () => {
 
 
     } catch (error) {
-
         console.log(error);
-
     }
 }
 
@@ -86,7 +84,6 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
     const descip = translateDescription()
 
-
     return {
         title: decodedKeyword,
         description: descip
@@ -103,15 +100,10 @@ const Page: React.FC<PageProps> = async ({ params }) => {
         <div className='overflow-x-hidden bg-slate-100'>
 
             <NewsHeader />
-
             <NewsMain />
-
             <RelatedNews news={relatedNews} />
-
             <LatestNews news={allNews} />
-
             <ReadMore news={allNews} />
-
             <NewsFooter />
 
         </div>

@@ -12,7 +12,6 @@ interface NewsType {
     id: string
     author: string
     title: string
-    content: string
     keywords: string[]
     created_at: string
     updated_at: string

@@ -9,7 +9,6 @@ interface ReadMoreProps {
         author: string
         title: string
         keywords: string[]
-        content: string
         updated_at: string
         created_at: string
     }[]

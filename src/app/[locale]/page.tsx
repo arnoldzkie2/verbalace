@@ -1,3 +1,4 @@
+'use client'
 import About from '@/components/web/About';
 import Contact from '@/components/web/Contact';
 import Footer from '@/components/web/Footer';

@@ -11,22 +11,17 @@ interface TranslateProps {
 }
 
 
-const Translate: React.FC<TranslateProps> = ({ locale, scroll,isOpen }) => {
+const Translate: React.FC<TranslateProps> = ({ locale, scroll, isOpen }) => {
 
     const router = useRouter()
 
     const currentPathname = usePathname()
 
     const handleTranslation = (event: React.ChangeEvent<HTMLSelectElement>) => {
-
         const selectedLocale = event.target.value;
-
         const newPath = `/${selectedLocale}${currentPathname}`
-
         router.push(newPath)
-        
-    };
-
+    }
 
     return (
         <select className={`py-2 px-1 text-center text-sm bg-transparent border-0 cursor-pointer border-b ${scroll || isOpen ? 'border-blue-600 text-gray-700' : 'border-gray-200 text-white focus:bg-blue-500'} appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 outline-none`} value={locale} onChange={handleTranslation}>

@@ -15,6 +15,9 @@ const getAllNews = async () => {
 
         if (data.ok) return data.data
 
+        console.log(data.data);
+        
+
         return []
 
     } catch (error) {

@@ -15,7 +15,7 @@
     "button": "Start Learn Now"
   },
   "services": {
-    "offer": "What are we Offer?",
+    "offer": "What we offer",
     "1": {
       "h1": "Standardized Test Preparation",
       "p": "Suitable for students who are currently or will be preparing for various English exams. It helps students improve their spoken English scores at a faster pace. Mainly includes exams such as IELTS, TOEFL, Cambridge Level 5, PTE, BEC, TOEIC, and others."
@@ -30,7 +30,7 @@
     }
   },
   "about": {
-    "h1": "Who we are?",
+    "h1": "Who we are",
     "description": {
       "1": "In the realm of personal growth and career advancement, the mastery of English takes the center stage. And this is where VerbalAce shines.",
       "2": "VerbalAce is dedicated to those who dare to dream big, who strive for personal and professional excellence. We offer affordable, customizable English courses, focusing primarily on enhancing your spoken language skills.",
@@ -75,6 +75,6 @@
   },
   "thankyou": {
     "h1": "Thank You for Visiting Us!",
-    "h2": "Discover More with Us Explore our website for valuable content, helpful resources, and exciting offers. We're thrilled to have you here!"
+    "h2": "Discover more with us, explore our website for valuable content, helpful resources, and exciting offers. We're thrilled to have you here!"
   }
 }

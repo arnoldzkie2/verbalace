@@ -94,7 +94,7 @@ const ReadMore: React.FC<ReadMoreProps> = ({ news }) => {
 
     const locale = useLocale();
 
-    const [maxVisibleItems, setMaxVisibleItems] = useState(6);
+    const [maxVisibleItems, setMaxVisibleItems] = useState(6)
 
     const displayedNews = news.slice(0, maxVisibleItems);
 

@@ -1,81 +1,79 @@
 {
   "header": {
     "home": "Trang chủ",
-    "about": "Giới thiệu",
+    "about": "Về chúng tôi",
     "contact": "Liên hệ",
     "services": "Dịch vụ",
     "news": "Tin tức",
     "signup": "Đăng ký",
     "login": "Đăng nhập",
-    "waitlist": "Tham gia danh sách chờ"
+    "waitlist": "Tham gia Danh sách chờ"
   },
   "main": {
-    "h1": "Nâng cao khả năng giao tiếp tiếng Anh ngay lập tức!",
-    "h2": "Nâng cao khả năng giao tiếp tiếng Anh ngay lập tức với chương trình tiếp thu triệt để của chúng tôi. Tự tin hơn, lưu loát hơn và có kỹ năng giao tiếp hiệu quả. Hãy tham gia ngay và khám phá tiềm năng đầy đủ của bạn!",
-    "button": "Bắt đầu Học ngay"
+    "h1": "Nâng cao khả năng nói tiếng Anh ngay lập tức!",
+    "h2": "Nâng cao ngay lập tức khả năng nói tiếng Anh của bạn với chương trình đắ immersion của chúng tôi. Tăng cường sự tự tin, lưuency và kỹ năng giao tiếp hiệu quả. Tham gia ngay và mở khóa toàn bộ tiềm năng của bạn!",
+    "button": "Bắt đầu học ngay"
   },
   "services": {
-    "offer": "Chúng tôi cung cấp gì?",
+    "offer": "Chúng tôi cung cấp gì",
     "1": {
-      "h1": "Chuẩn bị cho các kỳ thi tiêu chuẩn",
-      "p": "Phù hợp cho học viên đang hoặc sẽ chuẩn bị cho các kỳ thi tiếng Anh khác nhau. Giúp học viên cải thiện điểm thi tiếng Anh nói ở tốc độ nhanh hơn. Chủ yếu bao gồm các kỳ thi như IELTS, TOEFL, Cambridge Level 5, PTE, BEC, TOEIC và các kỳ thi khác."
+      "h1": "Chuẩn bị Kỳ thi Tiêu chuẩn",
+      "p": "Phù hợp cho sinh viên đang hoặc sẽ chuẩn bị cho các kỳ thi tiếng Anh khác nhau. Giúp sinh viên cải thiện điểm nói tiếng Anh của họ một cách nhanh chóng. Chủ yếu bao gồm các kỳ thi như IELTS, TOEFL, Cambridge Level 5, PTE, BEC, TOEIC và các kỳ thi khác."
     },
     "2": {
-      "h1": "Học hằng ngày",
-      "p": "Phù hợp cho học viên hiện tại không có nhu cầu chuẩn bị cho kỳ thi cụ thể, nhưng muốn nâng cao khả năng giao tiếp tiếng Anh tổng quát thông qua việc luyện tập hàng ngày. Chủ yếu bao gồm các chủ đề như hội thoại hàng ngày, tiếng Anh kinh doanh và tiếng Anh du lịch."
+      "h1": "Học hàng ngày",
+      "p": "Phù hợp cho sinh viên không có nhu cầu chuẩn bị thi rõ ràng vào lúc này, nhưng muốn nâng cao khả năng nói tiếng Anh tổng thể của họ thông qua việc thực hành hàng ngày. Chủ yếu bao gồm các chủ đề như giao tiếp hàng ngày, tiếng Anh kinh doanh và tiếng Anh du lịch."
     },
     "3": {
-      "h1": "Chủ đề tùy chỉnh",
-      "p": "Phù hợp với học viên có nhu cầu cá nhân mạnh, sắp xếp nội dung huấn luyện hướng đến dựa trên đặc điểm và nhu cầu cá nhân của học viên. Chủ yếu bao gồm các chủ đề như phỏng vấn việc làm, phỏng vấn học thuật, huấn luyện diễn thuyết và thảo luận tự do."
+      "h1": "Chủ đề Tùy chỉnh",
+      "p": "Phù hợp cho sinh viên có nhu cầu cá nhân mạnh mẽ, sắp xếp nội dung huấn luyện có mục tiêu theo đặc điểm và nhu cầu cá nhân của sinh viên. Chủ yếu bao gồm các chủ đề như phỏng vấn tuyển dụng, phỏng vấn học thuật, huấn luyện diễn thuyết và thảo luận tự do."
     }
   },
   "about": {
-    "h1": "Chúng tôi là ai?",
+    "h1": "Chúng tôi là ai",
     "description": {
-      "1": "Trong lĩnh vực phát triển cá nhân và thăng tiến sự nghiệp, việc thành thạo tiếng Anh chiếm vị trí trung tâm. Đây cũng chính là nơi mà VerbalAce tỏa sáng.",
-      "2": "VerbalAce dành riêng cho những người dám mơ lớn, những người phấn đấu vì sự xuất sắc cá nhân và chuyên nghiệp. Chúng tôi cung cấp các khóa học tiếng Anh có giá phải chăng, có thể tùy chỉnh, tập trung chủ yếu vào cải thiện kỹ năng giao tiếp.",
-      "3": "Tại VerbalAce, chúng tôi hiểu được sức mạnh của việc giảng dạy một kèm một. Chúng tôi coi trọng sự độc nhất vô nhị của từng học viên và điều chỉnh phương pháp dạy học để đáp ứng nhu cầu cá nhân của bạn. Và với công nghệ trí tuệ nhân tạo tích hợp vào chương trình học, tài liệu học tập được tùy chỉnh cho bạn, theo từng bước tiến của bạn, bất kỳ lúc nào, bất kỳ đâu.",
-      "4": "Trở thành bậc thầy của câu chuyện riêng của bạn. Với VerbalAce, bạn càng gần hơn một bước đạt được những cơ hội nghề nghiệp quốc tế và hoàn thành mục tiêu học ngôn ngữ của mình. Bắt đầu hành trình chinh phục với VerbalAce."
+      "1": "Trong lĩnh vực phát triển cá nhân và tiến bộ nghề nghiệp, việc thành thạo tiếng Anh đóng vai trò trung tâm. Đây là nơi VerbalAce tỏa sáng.",
+      "2": "VerbalAce dành cho những người dám mơ lớn, những người cố gắng đạt được xuất sắc cá nhân và chuyên nghiệp. Chúng tôi cung cấp các khóa học tiếng Anh có giá phải chăng, có thể tùy chỉnh, chủ yếu tập trung vào việc nâng cao kỹ năng nói của bạn.",
+      "3": "Tại VerbalAce, chúng tôi hiểu sức mạnh của việc giảng dạy một kèm một. Chúng tôi đánh giá sự độc đáo của mỗi người học và điều chỉnh phương pháp của chúng tôi để đáp ứng nhu cầu cá nhân của bạn. Với công nghệ AI tích hợp vào chương trình học của chúng tôi, tài liệu học được tùy chỉnh cho bạn, theo tốc độ của bạn, bất cứ nơi nào, bất cứ lúc nào."
     }
   },
   "contact": {
-    "h1": "Có câu hỏi gì không?",
-    "p": "Vui lòng điền vào biểu mẫu bên dưới hoặc gửi email cho chúng tôi theo địa chỉ support@verbalace.com và chúng tôi sẽ phản hồi bạn ngay lập tức về yêu cầu của bạn.",
-    "getintouch": "Liên hệ với chúng tôi",
+    "h1": "Có câu hỏi không?",
+    "p": "Vui lòng điền vào biểu mẫu dưới đây hoặc gửi email cho chúng tôi theo địa chỉ support@verbalace.com và chúng tôi sẽ sớm phản hồi đối với yêu cầu của bạn.",
+    "getintouch": "Liên hệ",
     "form": {
-      "name": "Họ và tên",
-      "phone": "Số điện thoại",
+      "name": "Tên",
+      "phone": "Điện thoại",
       "email": "Email",
-      "message": "Nội dung...",
+      "message": "Tin nhắn...",
       "button": "Gửi tin nhắn"
     }
   },
   "news": {
-    "h1": "Tiết lộ Câu chuyện của chúng tôi: Khám phá Những tin tức Mới nhất từ VerbalAce",
-    "latest": "Tin tức Mới nhất",
+    "h1": "Khám phá câu chuyện của chúng tôi: Khám phá những điều mới nhất từ VerbalAce",
+    "latest": "Tin tức mới nhất",
     "keyword": "Từ khóa liên quan",
-    "more": "Xem thêm",
-    "show": "Xem thêm",
+    "more": "Đọc thêm",
+    "show": "Hiển thị thêm",
     "key": "Từ khóa tin tức",
-    "published": "Ngày xuất bản: ",
-    "p": "Khám phá sức mạnh của học trực tuyến cùng VerbalAce! Nền tảng của chúng tôi cách mạng hóa giáo dục, cung cấp các khóa học do các chuyên gia dẫn dắt, nhằm mở khóa tiềm năng của bạn. Khám phá các lớp học ảo sáng tạo của chúng tôi, trải nghiệm học tập cá nhân hóa và luôn tiên phong. Tham gia cộng đồng học viên suốt đời của chúng tôi và om sát thế giới vô hạn. Hãy sẵn sàng khắc họa tương lai của bạn cùng VerbalAce!"
+    "published": "Đã xuất bản:",
+    "p": "Khám phá sức mạnh của việc học trực tuyến với VerbalAce! Nền tảng của chúng tôi cách mạng hóa giáo dục, cung cấp các khóa học do các chuyên gia dẫn dắt, được thiết kế để mở khóa tiềm năng của bạn. Khám phá các lớp học ảo sáng tạo của chúng tôi, trải nghiệm học tập cá nhân hóa và luôn dẫn đầu. Tham gia cộng đồng học viên suốt đời của chúng tôi và ôm trọn một thế giới của những khả năng không giới hạn. Hãy sẵn sàng hình thành tương lai của bạn với VerbalAce!"
   },
   "footer": {
-    "description": "VerbalAce cung cấp hướng dẫn tiếng Anh trực tuyến chuyên nghiệp, nhằm cải thiện kỹ năng nói tiếng Anh của bạn. Trải nghiệm học tập cá nhân qua giáo dục một-đối-một, giúp bạn tự tin giao tiếp bằng tiếng Anh. Dù bạn đang chuẩn bị cho kỳ thi IELTS/TOEFL hay cần cải thiện tiếng Anh thương mại của mình, VerbalAce là đối tác giúp bạn đạt được mục tiêu tiếng Anh.",
+    "description": "VerbalAce cung cấp dịch vụ hướng dẫn tiếng Anh trực tuyến chuyên nghiệp nhằm cải thiện kỹ năng nói tiếng Anh của bạn. Trải nghiệm giáo dục một kèm một được tùy chỉnh giúp bạn giao tiếp một cách tự tin bằng tiếng Anh. Cho dù bạn đang chuẩn bị cho IELTS/TOEFL hoặc cần nâng cao tiếng Anh kinh doanh của mình, VerbalAce là đối tác của bạn trong việc đạt được mục tiêu về ngôn ngữ tiếng Anh.",
     "contact": "Liên hệ",
     "company": "CÔNG TY",
     "faq": "Câu hỏi thường gặp",
-    "about": "Giới thiệu",
-    "news": "Tin tức mới nhất",
+    "about": "Về chúng tôi",
+    "news": "Tin tức",
     "license": "Giấy phép",
     "terms": "Điều khoản",
     "privacy": "Quyền riêng tư",
-    "join": "Tham gia với chúng tôi",
+    "join": "Tham gia cùng chúng tôi trên",
     "team": "Đội ngũ của chúng tôi"
   },
   "thankyou": {
-    "h1": "Cám ơn bạn đã ghé thăm!",
-    "h2": "Khám phá thêm cùng chúng tôi Khám phá trang web của chúng tôi với nội dung giá trị, tài nguyên hữu ích và những ưu đãi hấp dẫn. Chúng tôi vô cùng phấn khích khi chào đón bạn tại đây!"
+    "h1": "Cảm ơn bạn đã ghé thăm chúng tôi!",
+    "h2": "Khám phá thêm với chúng tôi, khám phá trang web của chúng tôi để có nội dung giá trị, nguồn tài nguyên hữu ích và các ưu đãi hấp dẫn. Chúng tôi rất vui được chào đón bạn ở đây!"
   }
-  
 }

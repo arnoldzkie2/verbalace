@@ -106,6 +106,8 @@ const LatestNews: React.FC<AllNewsProps> = ({ news }) => {
         return dateB - dateA;
     });
 
+    console.log(news);
+
     const displayedNews = sortedNews.slice(0, maxVisibleItems);
 
     return (

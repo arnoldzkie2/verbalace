@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                     </li>
                     <li className='flex gap-4'>
                         <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>Philipines: +63 9979 1572 44 0</p>
+                        <p className='text-sm lg:text-base'>Philipines: +63 9979 1572 44</p>
                     </li>
                     <li className='flex gap-4'>
                         <FontAwesomeIcon icon={faPhone} className='w-4' />

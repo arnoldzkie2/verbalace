@@ -21,7 +21,7 @@ interface ContactProps {
     message: string
 }
 
-export const Contact = ({ name, email, phone, message ='Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem' }: ContactProps) => {
+export const Contact = ({ name, email, phone, message = 'Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem' }: ContactProps) => {
 
     return (
         <Html>

@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export const revalidate = 43200
 
-const Page: React.FC<PageProps> = async ({ }) => {
+const Page: React.FC<PageProps> = async () => {
 
     const news = await getAllNews()
 
@@ -52,7 +52,7 @@ const Page: React.FC<PageProps> = async ({ }) => {
             <ReadMore news={news} />
 
             <NewsFooter />
-            
+
         </div>
     );
 };

@@ -11,25 +11,24 @@ export const POST = async (req: NextRequest) => {
 
         const { name, email, phone, message } = await req.json()
 
-        const replyToClient = await resend.emails.send({
-            from: 'VerbalAce <support@verbalace.com>',
-            to: email,
-            subject: 'Welcome to VerbalAce - Mastering English Made Fun and Easy!',
-            react: ThankyouEmail({ name }),
-            reply_to: 'VerbalAce <support@verbalace.com>'
-        })
+        Promise.all([
+            resend.emails.send({
+                from: 'VerbalAce <support@verbalace.com>',
+                to: email,
+                subject: 'Welcome to VerbalAce - Mastering English Made Fun and Easy!',
+                react: ThankyouEmail({ name }),
+                reply_to: 'VerbalAce <support@verbalace.com>'
+            }),
+            resend.emails.send({
+                from: `${name} <website@verbalace.com>`,
+                to: 'support@verbalace.com',
+                subject: 'VerbalAce Contact Message',
+                react: Contact({ name, email, phone, message }),
+                reply_to: `${name} <${email}>`
+            })
+        ])
 
-        const sendToTeam = await resend.emails.send({
-            from: `${name} <website@verbalace.com>`,
-            to: 'support@verbalace.com',
-            subject: 'VerbalAce Contact Message',
-            react: Contact({ name, email, phone, message }),
-            reply_to: `${name} <${email}>`
-        })
-
-        if (!replyToClient || !sendToTeam) return NextResponse.json({ msg: 'Something went wrong please try again.' }, { status: 400 })
-
-        return NextResponse.json({ ok: true })
+        return NextResponse.json({ ok: true }, { status: 200 })
 
     } catch (error) {
         console.log(error);

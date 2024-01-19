@@ -57,7 +57,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                 name, phone, email, message, locale
             })
 
-            if (data.status) {
+            if (data.ok) {
 
                 setIsSubmitting(false)
 

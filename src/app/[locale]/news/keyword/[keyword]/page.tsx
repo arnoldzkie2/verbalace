@@ -33,7 +33,8 @@ export const generateStaticParams = async () => {
 
         const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/news/keyword`, {
             params: {
-                departmentID: process.env.NEXT_PUBLIC_DEPARTMENT
+                departmentID: process.env.NEXT_PUBLIC_DEPARTMENT,
+                published: true
             }
         })
 

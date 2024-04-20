@@ -59,24 +59,19 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description,
     keywords,
     icons: {
-      icon: '/favicon.png'
+      icon: '/favicon.ico'
     },
   };
 }
-
 
 export default async function LocaleLayout({ children, params: { locale } }: Props) {
 
   let translation;
 
   try {
-
     translation = (await import(`../../translation/${locale}.json`)).default;
-
   } catch (error) {
-
     notFound();
-
   }
 
   return (

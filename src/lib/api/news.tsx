@@ -9,7 +9,8 @@ const getAllNews = async () => {
     try {
         const { data } = await axios.get(`${URL}/api/news`, {
             params: {
-                departmentID: DEPARTMENT
+                departmentID: DEPARTMENT,
+                published: true
             }
         })
 
@@ -38,7 +39,6 @@ const getSingleNews = async (id: string) => {
     } catch (error) {
         console.log(error);
     }
-
 }
 
 const getRelatedNews = async (keyword: string) => {

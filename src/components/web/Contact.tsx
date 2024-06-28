@@ -259,7 +259,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
 
                 <aside className='flex flex-col gap-3 md:gap-5 items-center'>
                     <Image src={'/web/contact/contact-img.webp'} alt='Contact us' className='w-72 h-auto sm:w-80' width={320} height={320} />
-                    <h1 className='text-white text-2xl md:text-3xl lg:text-gray-800 md:border-gray-300 2xl:text-white lg:mt-4 font-light md:font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
+                    <h1 className='text-white text-2xl md:text-3xl lg:text-gray-800 md:border-gray-300 lg:mt-4 font-light md:font-extralight w-full pb-4 border-b border-white'>{t('getintouch')}</h1>
                     <div className='flex w-full flex-col gap-5'>
                         <div className='flex gap-4'>
                             <FontAwesomeIcon icon={faPhoneVolume} className='w-5 h-5 p-2 border border-blue-600 bg-white rounded-full text-blue-600' />

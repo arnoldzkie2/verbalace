@@ -264,7 +264,7 @@ const Contact: React.FC<ContactProps> = ({ }) => {
                         <div className='flex gap-4'>
                             <FontAwesomeIcon icon={faPhoneVolume} className='w-5 h-5 p-2 border border-blue-600 bg-white rounded-full text-blue-600' />
                             <ul className='text-white md:text-gray-700 flex flex-col gap-3'>
-                                <li>China: +86 133 8613 7953</li>
+                                <li>+86 133 8613 7953</li>
                             </ul>
                         </div>
                         <div className='flex items-center gap-4'>

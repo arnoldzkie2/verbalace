@@ -7,7 +7,7 @@
     "news": "News",
     "signup": "Sign up",
     "login": "Login",
-    "waitlist": "Join Waitlist"
+    "contact us": "Contact Us"
   },
   "main": {
     "h1": "Boost your spoken english instantly!",
@@ -40,7 +40,7 @@
   },
   "contact": {
     "h1": "Have Some Questions?",
-    "p": "Please fill out the form below or e-mail us at support@verbalace.com and we will get back to you promptly regarding our request.",
+    "p": "Please fill out the form below or e-mail us at support@verbalace.com and we will get back to you promptly regarding your request.",
     "getintouch": "Get in touch",
     "form": {
       "name": "Name",

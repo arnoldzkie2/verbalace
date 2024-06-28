@@ -29,19 +29,7 @@ const Footer: React.FC<FooterProps> = ({ }) => {
                     <li className='text-lg font-medium md:mb-2 text-blue-600 uppercase'>{footer('contact')}</li>
                     <li className='flex gap-4'>
                         <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>China: +86 133 8613 7953</p>
-                    </li>
-                    <li className='flex gap-4'>
-                        <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>Philipines: +63 9979 1572 44</p>
-                    </li>
-                    <li className='flex gap-4'>
-                        <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>HongKong +852 5518 0295</p>
-                    </li>
-                    <li className='flex gap-4'>
-                        <FontAwesomeIcon icon={faPhone} className='w-4' />
-                        <p className='text-sm lg:text-base'>United States +1 503 209 9138</p>
+                        <p className='text-sm lg:text-base'>+86 133 8613 7953</p>
                     </li>
                     <li className='flex items-center gap-4'>
                         <FontAwesomeIcon icon={faEnvelope} className='w-4' />
